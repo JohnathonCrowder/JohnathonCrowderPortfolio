@@ -4,9 +4,9 @@ import { useInView } from 'react-intersection-observer';
 
 const LuxuryDivider = () => (
   <div className="flex items-center justify-center my-16">
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
-    <div className="mx-4 text-[#B8A04A]">✦</div>
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
+    <div className="mx-4 text-[#8EC38E]">✦</div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
   </div>
 );
 
@@ -18,9 +18,14 @@ const InteractiveImage = () => {
       className="relative cursor-pointer"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      whileHover={{ 
+        y: -5, 
+        boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+        transition: { duration: 0.3 }
+      }}
     >
       <motion.div 
-        className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden border border-[#B8A04A]/30"
+        className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden border border-[#32323A]"
         animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
         transition={{ duration: 0.3 }}
       >
@@ -37,14 +42,14 @@ const InteractiveImage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-[#B8A04A]/10 backdrop-blur-sm rounded-lg flex items-center justify-center"
+            className="absolute inset-0 bg-[#8EC38E]/10 backdrop-blur-sm rounded-lg flex items-center justify-center"
           >
             <div className="text-center">
               <p className="text-[#E8E8E8] text-xl mb-4">Click to view resume</p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-[#B8A04A] text-[#0B0B0F] rounded-lg"
+                className="px-6 py-3 bg-[#8EC38E] text-[#0B0B0F] rounded-lg"
               >
                 Download CV
               </motion.button>
@@ -68,8 +73,12 @@ const InteractiveStats = () => {
       {stats.map((stat, index) => (
         <motion.div
           key={index}
-          className="text-center p-4 rounded-lg hover:bg-[#1C1C22]/50 cursor-pointer"
-          whileHover={{ y: -5 }}
+          className="text-center p-4 rounded-lg bg-[#1C1C22]/80 backdrop-blur-sm border border-[#32323A] cursor-pointer"
+          whileHover={{ 
+            y: -5, 
+            boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+            transition: { duration: 0.3 }
+          }}
         >
           <motion.div
             initial={{ scale: 1 }}
@@ -78,7 +87,7 @@ const InteractiveStats = () => {
           >
             {stat.icon}
           </motion.div>
-          <div className="text-[#B8A04A] text-2xl font-light mb-1">{stat.value}+</div>
+          <div className="text-[#8EC38E] text-2xl font-light mb-1">{stat.value}+</div>
           <div className="text-[#A0A0A8] text-sm">{stat.label}</div>
         </motion.div>
       ))}
@@ -88,10 +97,14 @@ const InteractiveStats = () => {
 
 const StoryHighlight = ({ icon, title, description }) => (
   <motion.div
-    whileHover={{ y: -5 }}
-    className="bg-[#1C1C22]/50 p-6 rounded-lg border border-[#B8A04A]/20 hover:border-[#B8A04A]/50 transition-colors duration-300"
+    whileHover={{ 
+      y: -5, 
+      boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+      transition: { duration: 0.3 }
+    }}
+    className="bg-[#1C1C22]/80 backdrop-blur-sm p-6 rounded-lg border border-[#32323A] hover:border-[#8EC38E] transition-colors duration-300"
   >
-    <div className="text-[#B8A04A] text-2xl mb-4">{icon}</div>
+    <div className="text-[#8EC38E] text-2xl mb-4">{icon}</div>
     <h4 className="text-[#E8E8E8] text-lg font-light mb-2">{title}</h4>
     <p className="text-[#A0A0A8] text-sm leading-relaxed">{description}</p>
   </motion.div>
@@ -184,14 +197,14 @@ const ExpandedStory = () => {
             <motion.button
               key={index}
               onClick={() => setActivePhase(index)}
-              className={`relative px-4 py-2 flex-shrink-0 ${activePhase === index ? 'text-[#B8A04A]' : 'text-[#A0A0A8]'}`}
+              className={`relative px-4 py-2 flex-shrink-0 ${activePhase === index ? 'text-[#8EC38E]' : 'text-[#A0A0A8]'}`}
               whileHover={{ y: -2 }}
             >
               <span className="text-sm block mb-1">{phase.year}</span>
               <span className="block font-light">{phase.title}</span>
               {activePhase === index && (
                 <motion.div 
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B8A04A]"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#8EC38E]"
                   layoutId="underline"
                 />
               )}
@@ -206,7 +219,7 @@ const ExpandedStory = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20"
+            className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]"
           >
             <h4 className="text-xl text-[#E8E8E8] mb-4">{journeyPhases[activePhase].title}</h4>
             <p className="text-[#A0A0A8] mb-6">{journeyPhases[activePhase].description}</p>
@@ -219,7 +232,7 @@ const ExpandedStory = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center"
                 >
-                  <span className="text-[#B8A04A] mr-2">✦</span>
+                  <span className="text-[#8EC38E] mr-2">✦</span>
                   <span className="text-[#A0A0A8] text-sm">{detail}</span>
                 </motion.div>
               ))}
@@ -235,7 +248,7 @@ const ExpandedStory = () => {
         ))}
       </div>
 
-      <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20">
+      <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]">
         <h4 className="text-xl text-[#E8E8E8] mb-4">Philosophy</h4>
         <p className="text-[#A0A0A8] mb-4 leading-relaxed">
           I believe that great software is not just about writing code; it's about creating experiences that make a difference. Every line of code I write is guided by principles of user-centricity, performance, and maintainability.
@@ -383,14 +396,14 @@ const InteractiveTimeline = () => {
             <motion.button
               key={index}
               onClick={() => setActiveCompany(index)}
-              className={`relative px-4 py-2 flex-shrink-0 ${activeCompany === index ? 'text-[#B8A04A]' : 'text-[#A0A0A8]'}`}
+              className={`relative px-4 py-2 flex-shrink-0 ${activeCompany === index ? 'text-[#8EC38E]' : 'text-[#A0A0A8]'}`}
               whileHover={{ y: -2 }}
             >
               <span className="text-sm block mb-1">{exp.period}</span>
               <span className="block font-light">{exp.company}</span>
               {activeCompany === index && (
                 <motion.div 
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B8A04A]"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#8EC38E]"
                   layoutId="companyUnderline"
                 />
               )}
@@ -406,12 +419,12 @@ const InteractiveTimeline = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20 mb-8">
+            <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A] mb-8">
               <h3 className="text-2xl text-[#E8E8E8] font-light mb-2">{experiences[activeCompany].role}</h3>
               <p className="text-[#A0A0A8] mb-4">{experiences[activeCompany].description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {experiences[activeCompany].technologies.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 bg-[#B8A04A]/10 text-[#B8A04A] rounded-full text-sm">
+                  <span key={index} className="px-3 py-1 bg-[#32323A] text-[#8EC38E] rounded-full text-sm">
                     {tech}
                   </span>
                 ))}
@@ -425,7 +438,7 @@ const InteractiveTimeline = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20"
+                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]"
                 >
                   <div className="flex items-center mb-3">
                     <span className="text-2xl mr-3">{achievement.icon}</span>
@@ -444,9 +457,9 @@ const InteractiveTimeline = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20"
+                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]"
                 >
-                  <h5 className="text-[#B8A04A] text-lg mb-2">{project.name}</h5>
+                  <h5 className="text-[#8EC38E] text-lg mb-2">{project.name}</h5>
                   <p className="text-[#A0A0A8] text-sm">{project.description}</p>
                 </motion.div>
               ))}
@@ -511,8 +524,11 @@ function About() {
             {Object.keys(tabContent).map((tab) => (
               <motion.button
                 key={tab}
-                className={`mx-4 px-6 py-2 rounded-lg ${activeTab === tab ? 'bg-[#B8A04A] text-[#0B0B0F]' : 'text-[#A0A0A8]'}`}
-                whileHover={{ y: -2 }}
+                className={`mx-4 px-6 py-2 rounded-lg ${activeTab === tab ? 'bg-[#8EC38E] text-[#0B0B0F]' : 'text-[#A0A0A8]'}`}
+                whileHover={{ 
+                  y: -2,
+                  boxShadow: '0 5px 15px -5px rgba(142, 195, 142, 0.6)',
+                }}
                 whileTap={{ y: 0 }}
                 onClick={() => setActiveTab(tab)}
               >
@@ -534,8 +550,11 @@ function About() {
           >
             <motion.a 
               href="#contact" 
-              className="inline-block px-8 py-4 border border-[#B8A04A] text-[#B8A04A] hover:bg-[#B8A04A] hover:text-[#0B0B0F] transition-all duration-300 rounded-lg"
-              whileHover={{ scale: 1.05 }}
+              className="inline-block px-8 py-4 border border-[#8EC38E] text-[#8EC38E] hover:bg-[#8EC38E] hover:text-[#0B0B0F] transition-all duration-300 rounded-lg"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+              }}
               whileTap={{ scale: 0.95 }}
             >
               Let's Connect
