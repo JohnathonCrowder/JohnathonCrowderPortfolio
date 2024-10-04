@@ -248,58 +248,213 @@ const ExpandedStory = () => {
   );
 };
 
-const InteractiveTimeline = ({ items }) => {
-  const [selectedIndex, setSelectedIndex] = useState(null);
+const InteractiveTimeline = () => {
+  const [activeCompany, setActiveCompany] = useState(0);
+  
+  const experiences = [
+    {
+      company: "TechCorp",
+      role: "Senior Software Engineer",
+      period: "2021 - Present",
+      description: "Leading innovative solutions for enterprise-scale applications, focusing on cloud-native architectures and team leadership.",
+      technologies: ["React", "Node.js", "AWS", "Kubernetes"],
+      achievements: [
+        {
+          title: "Performance Optimization",
+          description: "Improved system performance by 40% through innovative caching strategies and code optimization.",
+          icon: "📈"
+        },
+        {
+          title: "Team Leadership",
+          description: "Led and mentored a team of 5 developers, implementing agile methodologies and best practices.",
+          icon: "👥"
+        },
+        {
+          title: "Architecture Modernization",
+          description: "Spearheaded the transition to a microservices architecture, enhancing scalability and maintainability.",
+          icon: "🏗️"
+        },
+        {
+          title: "DevOps Enhancement",
+          description: "Reduced deployment time by 60% by implementing automated CI/CD pipelines and infrastructure as code.",
+          icon: "⚡"
+        }
+      ],
+      keyProjects: [
+        {
+          name: "Enterprise Dashboard",
+          description: "Led the development of a real-time analytics dashboard processing millions of data points daily."
+        },
+        {
+          name: "API Gateway",
+          description: "Designed and implemented a centralized API gateway handling 1000+ requests per second."
+        }
+      ]
+    },
+    {
+      company: "InnovateSoft",
+      role: "Full Stack Developer",
+      period: "2019 - 2021",
+      description: "Architected and developed comprehensive full-stack solutions, focusing on scalability and user experience.",
+      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
+      achievements: [
+        {
+          title: "User Engagement",
+          description: "Increased user engagement by 25% through UI/UX improvements and performance optimization.",
+          icon: "🎯"
+        },
+        {
+          title: "Component Library",
+          description: "Developed a reusable component library, reducing development time for new features by 30%.",
+          icon: "🏗️"
+        },
+        {
+          title: "Database Optimization",
+          description: "Optimized database queries, resulting in a 50% reduction in average response time.",
+          icon: "⚡"
+        },
+        {
+          title: "Automation",
+          description: "Implemented CI/CD pipeline, reducing deployment errors by 75% and improving team efficiency.",
+          icon: "🤖"
+        }
+      ],
+      keyProjects: [
+        {
+          name: "E-commerce Platform",
+          description: "Built a scalable e-commerce platform handling 10,000+ daily transactions."
+        },
+        {
+          name: "CMS System",
+          description: "Developed a custom CMS enabling non-technical users to manage complex content workflows."
+        }
+      ]
+    },
+    {
+      company: "WebPioneers",
+      role: "Frontend Developer",
+      period: "2017 - 2019",
+      description: "Specialized in crafting responsive, user-centric interfaces with a focus on accessibility and performance.",
+      technologies: ["React", "TypeScript", "SASS", "Jest"],
+      achievements: [
+        {
+          title: "Design System",
+          description: "Created a comprehensive design system, improving consistency across multiple applications.",
+          icon: "🎨"
+        },
+        {
+          title: "Performance",
+          description: "Reduced load time by 30% through code splitting and lazy loading implementation.",
+          icon: "⚡"
+        },
+        {
+          title: "A/B Testing",
+          description: "Implemented A/B testing framework, leading to a 15% increase in conversion rates.",
+          icon: "🔬"
+        },
+        {
+          title: "Accessibility",
+          description: "Improved accessibility compliance to WCAG 2.1 AA standards across all projects.",
+          icon: "♿"
+        }
+      ],
+      keyProjects: [
+        {
+          name: "Marketing Website",
+          description: "Developed a high-performance marketing website with interactive data visualizations."
+        },
+        {
+          name: "Progressive Web App",
+          description: "Built a PWA achieving a 90+ Lighthouse score across all categories."
+        }
+      ]
+    }
+  ];
 
   return (
-    <div className="space-y-8">
-      {items.map((item, index) => (
-        <motion.div
-          key={index}
-          className="relative"
-          onHoverStart={() => setSelectedIndex(index)}
-          onHoverEnd={() => setSelectedIndex(null)}
-        >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+    >
+      <div className="mb-12">
+        <div className="flex justify-between mb-8 overflow-x-auto">
+          {experiences.map((exp, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setActiveCompany(index)}
+              className={`relative px-4 py-2 flex-shrink-0 ${activeCompany === index ? 'text-[#B8A04A]' : 'text-[#A0A0A8]'}`}
+              whileHover={{ y: -2 }}
+            >
+              <span className="text-sm block mb-1">{exp.period}</span>
+              <span className="block font-light">{exp.company}</span>
+              {activeCompany === index && (
+                <motion.div 
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B8A04A]"
+                  layoutId="companyUnderline"
+                />
+              )}
+            </motion.button>
+          ))}
+        </div>
+        
+        <AnimatePresence mode="wait">
           <motion.div
-            className={`flex p-6 rounded-lg cursor-pointer ${selectedIndex === index ? 'bg-[#1C1C22]/50' : ''}`}
-            whileHover={{ x: 10 }}
-            transition={{ duration: 0.2 }}
+            key={activeCompany}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="mr-8">
-              <div className="text-[#B8A04A] text-xl font-light">{item.year}</div>
+            <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20 mb-8">
+              <h3 className="text-2xl text-[#E8E8E8] font-light mb-2">{experiences[activeCompany].role}</h3>
+              <p className="text-[#A0A0A8] mb-4">{experiences[activeCompany].description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {experiences[activeCompany].technologies.map((tech, index) => (
+                  <span key={index} className="px-3 py-1 bg-[#B8A04A]/10 text-[#B8A04A] rounded-full text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div>
-              <h3 className="text-[#E8E8E8] text-xl font-light mb-2">{item.title}</h3>
-              <p className="text-[#A0A0A8] leading-relaxed">{item.description}</p>
-              
-              <AnimatePresence>
-                {selectedIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 space-y-2"
-                  >
-                    {item.achievements.map((achievement, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center"
-                      >
-                        <span className="text-[#B8A04A] mr-2">✦</span>
-                        <span className="text-[#A0A0A8]">{achievement}</span>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {experiences[activeCompany].achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20"
+                >
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl mr-3">{achievement.icon}</span>
+                    <h4 className="text-[#E8E8E8] text-lg font-light">{achievement.title}</h4>
+                  </div>
+                  <p className="text-[#A0A0A8] text-sm">{achievement.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <h4 className="text-xl text-[#E8E8E8] font-light mb-4">Key Projects</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {experiences[activeCompany].keyProjects.map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#B8A04A]/20"
+                >
+                  <h5 className="text-[#B8A04A] text-lg mb-2">{project.name}</h5>
+                  <p className="text-[#A0A0A8] text-sm">{project.description}</p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
-        </motion.div>
-      ))}
-    </div>
+        </AnimatePresence>
+      </div>
+    </motion.div>
   );
 };
 
@@ -310,42 +465,6 @@ function About() {
     threshold: 0.1,
   });
 
-  const experienceItems = [
-    {
-      year: '2021',
-      title: 'Senior Software Engineer at TechCorp',
-      description: 'Led development of enterprise-scale applications.',
-      achievements: [
-        'Improved system performance by 40%',
-        'Led a team of 5 developers',
-        'Implemented microservices architecture',
-        'Reduced deployment time by 60%'
-      ]
-    },
-    {
-      year: '2019',
-      title: 'Full Stack Developer at InnovateSoft',
-      description: 'Architected and developed full-stack solutions.',
-      achievements: [
-        'Increased user engagement by 25%',
-        'Developed a component library',
-        'Optimized database queries',
-        'Implemented CI/CD pipeline'
-      ]
-    },
-    {
-      year: '2017',
-      title: 'Frontend Developer at WebPioneers',
-      description: 'Crafted responsive, user-centric interfaces.',
-      achievements: [
-        'Created responsive design system',
-        'Reduced load time by 30%',
-        'Implemented A/B testing',
-        'Improved accessibility compliance'
-      ]
-    },
-  ];
-
   const tabContent = {
     story: <ExpandedStory />,
     experience: (
@@ -355,7 +474,7 @@ function About() {
         exit={{ opacity: 0, y: -20 }}
       >
         <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">Professional Journey</h3>
-        <InteractiveTimeline items={experienceItems} />
+        <InteractiveTimeline />
       </motion.div>
     ),
   };
