@@ -2,29 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const SkillCard = ({ skill, category, index }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="group relative bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] p-8 
-               hover:border-[#B8A04A] transition-all duration-500 overflow-hidden"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-[#B8A04A]/0 to-[#B8A04A]/0 opacity-0 
-                    group-hover:opacity-10 transition-opacity duration-500"></div>
-    <div className="relative z-10">
-      <div className="flex items-center mb-6">
-        <div className={`w-0.5 h-8 ${category.accentColor} mr-4`}></div>
-        <h4 className="text-xl font-light text-[#E8E8E8]">{skill.name}</h4>
+const SkillCard = ({ skill, category, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] overflow-hidden shadow-lg"
+      whileHover={{ 
+        y: -5, 
+        boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+        transition: { duration: 0.3 }
+      }}
+    >
+      <div className="p-6">
+        <div className="flex items-center mb-4">
+          <div className={`w-1 h-8 ${category.accentColor} mr-4`}></div>
+          <h4 className="text-xl font-semibold text-[#E8E8E8]">{skill.name}</h4>
+        </div>
+        <p className="text-[#A0A0A8] text-sm mb-4 h-20 overflow-hidden">{skill.description}</p>
+        <div className="flex justify-between text-sm font-light">
+          <span className="text-[#8EC38E]">{skill.yearsExp} Years Experience</span>
+          <span className="text-[#707078]">{skill.projects} Elite Projects</span>
+        </div>
       </div>
-      <p className="text-[#A0A0A8] text-sm mb-6 min-h-[40px] leading-relaxed">{skill.description}</p>
-      <div className="flex justify-between text-sm font-light">
-        <span className="text-[#B8A04A]">{skill.yearsExp} Years Experience</span>
-        <span className="text-[#707078]">{skill.projects} Elite Projects</span>
-      </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const CategoryCard = ({ category }) => (
   <motion.div
@@ -33,7 +37,12 @@ const CategoryCard = ({ category }) => (
     exit={{ opacity: 0, y: -20 }}
     transition={{ duration: 0.5 }}
     className="col-span-full bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] 
-               overflow-hidden mb-12 hover:border-[#B8A04A] transition-all duration-500"
+               overflow-hidden mb-12 shadow-lg"
+    whileHover={{ 
+      y: -5, 
+      boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+      transition: { duration: 0.3 }
+    }}
   >
     <div className={`p-10 ${category.bgColor}`}>
       <div className="flex items-center justify-between">
@@ -41,7 +50,7 @@ const CategoryCard = ({ category }) => (
           <span className="text-4xl mr-4">{category.icon}</span>
           {category.name}
         </h3>
-        <span className="text-[#B8A04A] font-light">{category.experience} Years of Excellence</span>
+        <span className="text-[#8EC38E] font-light">{category.experience} Years of Excellence</span>
       </div>
       <p className="mt-6 text-[#A0A0A8] leading-relaxed text-lg">{category.description}</p>
     </div>
@@ -49,7 +58,7 @@ const CategoryCard = ({ category }) => (
       <div className="grid grid-cols-2 gap-8">
         {category.keyPoints.map((point, index) => (
           <div key={index} className="flex items-start">
-            <div className={`${category.accentColor} w-0.5 h-full mr-4 flex-shrink-0`}></div>
+            <div className={`${category.accentColor} w-1 h-full mr-4 flex-shrink-0`}></div>
             <span className="text-[#A0A0A8] leading-relaxed">{point}</span>
           </div>
         ))}
@@ -62,8 +71,8 @@ const SkillCategory = ({ category, isSelected, onSelect }) => (
   <motion.button
     onClick={() => onSelect(category.name)}
     className={`px-8 py-4 rounded-lg font-light text-sm tracking-wider
-      ${isSelected ? 'bg-[#1C1C22]/80 text-[#E8E8E8] border-[#B8A04A]' : 'bg-transparent text-[#A0A0A8] border-[#32323A]'}
-      transition-all duration-500 border hover:border-[#B8A04A] backdrop-blur-sm`}
+      ${isSelected ? 'bg-[#1C1C22]/80 text-[#E8E8E8] border-[#8EC38E]' : 'bg-transparent text-[#A0A0A8] border-[#32323A]'}
+      transition-all duration-500 border hover:border-[#8EC38E] backdrop-blur-sm`}
     whileHover={{ y: -2 }}
     whileTap={{ y: 0 }}
   >
@@ -74,9 +83,9 @@ const SkillCategory = ({ category, isSelected, onSelect }) => (
 
 const LuxuryDivider = () => (
   <div className="flex items-center justify-center my-16">
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
-    <div className="mx-4 text-[#B8A04A]">✦</div>
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
+    <div className="mx-4 text-[#8EC38E]">✦</div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
   </div>
 );
 
@@ -99,7 +108,7 @@ const SkillsSection = () => {
       name: 'Frontend Development',
       icon: '🎨',
       bgColor: 'bg-[#1E1E24]',
-      accentColor: 'bg-[#B8A04A]',
+      accentColor: 'bg-[#8EC38E]',
       experience: '5+',
       description: 'Crafting immaculate digital experiences through meticulous attention to detail and innovative design principles.',
       keyPoints: [
@@ -119,7 +128,7 @@ const SkillsSection = () => {
       name: 'Backend Architecture',
       icon: '⚙️',
       bgColor: 'bg-[#1E1E24]',
-      accentColor: 'bg-[#B8A04A]',
+      accentColor: 'bg-[#8EC38E]',
       experience: '4+',
       description: 'Engineering sophisticated server architectures with unparalleled attention to scalability and performance.',
       keyPoints: [
@@ -139,7 +148,7 @@ const SkillsSection = () => {
       name: 'DevOps & Cloud',
       icon: '🚀',
       bgColor: 'bg-[#1E1E24]',
-      accentColor: 'bg-[#B8A04A]',
+      accentColor: 'bg-[#8EC38E]',
       experience: '3+',
       description: 'Orchestrating deployment ecosystems with a focus on automation, reliability, and operational excellence.',
       keyPoints: [
