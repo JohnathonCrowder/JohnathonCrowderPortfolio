@@ -179,12 +179,12 @@ const ExpandedStory = () => {
       <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">My Journey</h3>
       
       <div className="mb-12">
-        <div className="flex justify-between mb-8">
+        <div className="flex justify-between mb-8 overflow-x-auto">
           {journeyPhases.map((phase, index) => (
             <motion.button
               key={index}
               onClick={() => setActivePhase(index)}
-              className={`relative px-4 py-2 ${activePhase === index ? 'text-[#B8A04A]' : 'text-[#A0A0A8]'}`}
+              className={`relative px-4 py-2 flex-shrink-0 ${activePhase === index ? 'text-[#B8A04A]' : 'text-[#A0A0A8]'}`}
               whileHover={{ y: -2 }}
             >
               <span className="text-sm block mb-1">{phase.year}</span>
@@ -229,7 +229,7 @@ const ExpandedStory = () => {
       </div>
 
       <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">What Drives Me</h3>
-      <div className="grid grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {highlights.map((highlight, index) => (
           <StoryHighlight key={index} {...highlight} />
         ))}
@@ -378,34 +378,39 @@ function About() {
           <h2 className="text-5xl font-light text-center text-[#E8E8E8] mb-6 tracking-wide">About Me</h2>
           <LuxuryDivider />
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Personal Info and Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
             <div>
               <InteractiveImage />
-              <div className="mt-8">
-                <InteractiveStats />
-              </div>
             </div>
-
-            <div>
-              <div className="flex mb-8">
-                {Object.keys(tabContent).map((tab) => (
-                  <motion.button
-                    key={tab}
-                    className={`mr-4 px-6 py-2 rounded-lg ${activeTab === tab ? 'bg-[#B8A04A] text-[#0B0B0F]' : 'text-[#A0A0A8]'}`}
-                    whileHover={{ y: -2 }}
-                    whileTap={{ y: 0 }}
-                    onClick={() => setActiveTab(tab)}
-                  >
-                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                  </motion.button>
-                ))}
-              </div>
-              
-              <AnimatePresence mode="wait">
-                {tabContent[activeTab]}
-              </AnimatePresence>
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">John Doe</h3>
+              <p className="text-[#A0A0A8] mb-8 leading-relaxed">
+                Passionate full-stack developer with 5+ years of experience in crafting innovative web solutions. Committed to pushing the boundaries of what's possible in web development while maintaining a focus on user experience and performance.
+              </p>
+              <InteractiveStats />
             </div>
           </div>
+
+          {/* Tab Navigation */}
+          <div className="flex justify-center mb-8">
+            {Object.keys(tabContent).map((tab) => (
+              <motion.button
+                key={tab}
+                className={`mx-4 px-6 py-2 rounded-lg ${activeTab === tab ? 'bg-[#B8A04A] text-[#0B0B0F]' : 'text-[#A0A0A8]'}`}
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </motion.button>
+            ))}
+          </div>
+          
+          {/* Tab Content */}
+          <AnimatePresence mode="wait">
+            {tabContent[activeTab]}
+          </AnimatePresence>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
