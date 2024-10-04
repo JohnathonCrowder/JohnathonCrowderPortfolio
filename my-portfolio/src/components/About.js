@@ -397,7 +397,11 @@ const InteractiveTimeline = () => {
               key={index}
               onClick={() => setActiveCompany(index)}
               className={`relative px-4 py-2 flex-shrink-0 ${activeCompany === index ? 'text-[#8EC38E]' : 'text-[#A0A0A8]'}`}
-              whileHover={{ y: -2 }}
+              whileHover={{ 
+                y: -2,
+                color: '#8EC38E',
+                transition: { duration: 0.3 }
+              }}
             >
               <span className="text-sm block mb-1">{exp.period}</span>
               <span className="block font-light">{exp.company}</span>
@@ -419,17 +423,32 @@ const InteractiveTimeline = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A] mb-8">
+            <motion.div 
+              className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A] mb-8"
+              whileHover={{
+                boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.2)',
+                borderColor: '#8EC38E',
+                transition: { duration: 0.3 }
+              }}
+            >
               <h3 className="text-2xl text-[#E8E8E8] font-light mb-2">{experiences[activeCompany].role}</h3>
               <p className="text-[#A0A0A8] mb-4">{experiences[activeCompany].description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {experiences[activeCompany].technologies.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 bg-[#32323A] text-[#8EC38E] rounded-full text-sm">
+                  <motion.span 
+                    key={index} 
+                    className="px-3 py-1 bg-[#32323A] text-[#8EC38E] rounded-full text-sm"
+                    whileHover={{
+                      backgroundColor: '#8EC38E',
+                      color: '#0B0B0F',
+                      transition: { duration: 0.3 }
+                    }}
+                  >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {experiences[activeCompany].achievements.map((achievement, index) => (
@@ -439,6 +458,12 @@ const InteractiveTimeline = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]"
+                  whileHover={{
+                    y: -5,
+                    boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+                    borderColor: '#8EC38E',
+                    transition: { duration: 0.3 }
+                  }}
                 >
                   <div className="flex items-center mb-3">
                     <span className="text-2xl mr-3">{achievement.icon}</span>
@@ -458,6 +483,12 @@ const InteractiveTimeline = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-[#1C1C22]/30 p-6 rounded-lg border border-[#32323A]"
+                  whileHover={{
+                    y: -5,
+                    boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+                    borderColor: '#8EC38E',
+                    transition: { duration: 0.3 }
+                  }}
                 >
                   <h5 className="text-[#8EC38E] text-lg mb-2">{project.name}</h5>
                   <p className="text-[#A0A0A8] text-sm">{project.description}</p>
