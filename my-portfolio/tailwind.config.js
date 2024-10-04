@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+
+      fontFamily: {
+        luxury: ['Playfair Display', 'serif'],
+      },
       
       animation: {
         fadeIn: 'fadeIn 1s ease-in forwards',
@@ -25,6 +29,7 @@ module.exports = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.5' },
         },
+
       },
     },
   },
