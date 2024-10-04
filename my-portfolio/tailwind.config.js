@@ -5,29 +5,24 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        fadeIn: 'fadeIn 1s ease-out forwards',
-        fadeInDown: 'fadeInDown 1s ease-out',
-        spinWords: 'spinWords 6s infinite',
-        bounce: 'bounce 2s infinite',
+        fadeIn: 'fadeIn 1s ease-in forwards',
+        slide: 'slide 12s linear infinite',
+        pulse: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        fadeInDown: {
-          '0%': { opacity: '0', transform: 'translateY(-20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        slide: {
+          '0%, 25%': { transform: 'translateY(0%)' },
+          '25%, 50%': { transform: 'translateY(-25%)' },
+          '50%, 75%': { transform: 'translateY(-50%)' },
+          '75%, 100%': { transform: 'translateY(-75%)' },
         },
-        spinWords: {
-          '10%': { transform: 'translateY(-112%)' },
-          '25%': { transform: 'translateY(-100%)' },
-          '35%': { transform: 'translateY(-212%)' },
-          '50%': { transform: 'translateY(-200%)' },
-          '60%': { transform: 'translateY(-312%)' },
-          '75%': { transform: 'translateY(-300%)' },
-          '85%': { transform: 'translateY(-412%)' },
-          '100%': { transform: 'translateY(-400%)' },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         },
       },
     },
