@@ -480,12 +480,7 @@ function About() {
   };
 
   return (
-    <section id="about" className="relative py-32 bg-[#0B0B0F]">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="stars"></div>
-        <div className="twinkling"></div>
-      </div>
-
+    <section id="about" className="relative py-32">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           ref={ref}
