@@ -4,9 +4,9 @@ import { useInView } from 'react-intersection-observer';
 
 const LuxuryDivider = () => (
   <div className="flex items-center justify-center my-16">
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
-    <div className="mx-4 text-[#B8A04A]">✦</div>
-    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#B8A04A] to-transparent"></div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
+    <div className="mx-4 text-[#8EC38E]">✦</div>
+    <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#8EC38E] to-transparent"></div>
   </div>
 );
 
@@ -45,37 +45,74 @@ function Contact() {
           <LuxuryDivider />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] p-8 hover:border-[#B8A04A] transition-all duration-500">
+            <motion.div 
+              className="bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] p-8"
+              whileHover={{
+                y: -5,
+                boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+                borderColor: '#8EC38E',
+                transition: { duration: 0.3 }
+              }}
+            >
               <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">Contact Information</h3>
               <div className="space-y-4">
-                <div className="flex items-center">
-                  <i className="fas fa-envelope text-[#B8A04A] mr-4"></i>
-                  <a href="mailto:johndoe@example.com" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors">
+                <motion.div 
+                  className="flex items-center"
+                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                >
+                  <i className="fas fa-envelope text-[#8EC38E] mr-4"></i>
+                  <a href="mailto:johndoe@example.com" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
                     johndoe@example.com
                   </a>
-                </div>
-                <div className="flex items-center">
-                  <i className="fas fa-phone text-[#B8A04A] mr-4"></i>
-                  <a href="tel:+1123456789" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center"
+                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                >
+                  <i className="fas fa-phone text-[#8EC38E] mr-4"></i>
+                  <a href="tel:+1123456789" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
                     +1 (123) 456-7890
                   </a>
-                </div>
+                </motion.div>
               </div>
               <h4 className="text-xl font-light text-[#E8E8E8] mt-8 mb-4">Connect with Me</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors">
+                <motion.a 
+                  href="#" 
+                  className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors"
+                  whileHover={{ y: -2, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <i className="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a href="#" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors">
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors"
+                  whileHover={{ y: -2, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <i className="fab fa-github fa-2x"></i>
-                </a>
-                <a href="#" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors">
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors"
+                  whileHover={{ y: -2, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <i className="fab fa-twitter fa-2x"></i>
-                </a>
+                </motion.a>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] p-8 hover:border-[#B8A04A] transition-all duration-500">
+            <motion.div 
+              className="bg-[#1C1C22]/80 backdrop-blur-sm rounded-lg border border-[#32323A] p-8"
+              whileHover={{
+                y: -5,
+                boxShadow: '0 10px 30px -15px rgba(142, 195, 142, 0.6)',
+                borderColor: '#8EC38E',
+                transition: { duration: 0.3 }
+              }}
+            >
               <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -87,7 +124,7 @@ function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#B8A04A] text-[#E8E8E8]"
+                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#8EC38E] text-[#E8E8E8]"
                   />
                 </div>
                 <div>
@@ -99,7 +136,7 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#B8A04A] text-[#E8E8E8]"
+                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#8EC38E] text-[#E8E8E8]"
                   />
                 </div>
                 <div>
@@ -111,19 +148,19 @@ function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#B8A04A] text-[#E8E8E8]"
+                    className="w-full px-3 py-2 bg-[#32323A] border border-[#4A4A55] rounded-md focus:outline-none focus:ring-2 focus:ring-[#8EC38E] text-[#E8E8E8]"
                   ></textarea>
                 </div>
                 <motion.button
                   type="submit"
-                  className="w-full bg-[#B8A04A] text-[#0B0B0F] py-2 px-4 rounded-md hover:bg-[#D4BA5A] transition duration-300"
+                  className="w-full bg-[#8EC38E] text-[#0B0B0F] py-2 px-4 rounded-md hover:bg-[#A5D0A5] transition duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Send Message
                 </motion.button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
