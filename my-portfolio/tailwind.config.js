@@ -4,6 +4,7 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      
       animation: {
         fadeIn: 'fadeIn 1s ease-in forwards',
         slide: 'slide 12s linear infinite',
