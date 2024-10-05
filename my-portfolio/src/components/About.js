@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const LuxuryDivider = () => (
   <div className="flex items-center justify-center my-16">
@@ -509,18 +516,17 @@ function About() {
     threshold: 0.1,
   });
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
   const tabContent = {
     story: <ExpandedStory />,
-    experience: (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-      >
-        <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">Professional Journey</h3>
-        <InteractiveTimeline />
-      </motion.div>
-    ),
+    experience: <InteractiveTimeline />,
   };
 
   return (
@@ -533,15 +539,15 @@ function About() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-5xl font-light text-center text-[#E8E8E8] mb-6 tracking-wide">About Me</h2>
+          <h2 className="text-5xl font-light text-center text-[#E8E8E8] mb-6 tracking-wide" data-aos="fade-up">About Me</h2>
           <LuxuryDivider />
           
           {/* Personal Info and Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
-            <div>
+            <div data-aos="fade-right" data-aos-delay="200">
               <InteractiveImage />
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center" data-aos="fade-left" data-aos-delay="400">
               <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">John Doe</h3>
               <p className="text-[#A0A0A8] mb-8 leading-relaxed">
                 Passionate full-stack developer with 5+ years of experience in crafting innovative web solutions. Committed to pushing the boundaries of what's possible in web development while maintaining a focus on user experience and performance.
@@ -551,7 +557,7 @@ function About() {
           </div>
 
           {/* Tab Navigation */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8" data-aos="fade-up" data-aos-delay="600">
             {Object.keys(tabContent).map((tab) => (
               <motion.button
                 key={tab}
@@ -570,7 +576,9 @@ function About() {
           
           {/* Tab Content */}
           <AnimatePresence mode="wait">
-            {tabContent[activeTab]}
+            <div data-aos="fade-up" data-aos-delay="800">
+              {tabContent[activeTab]}
+            </div>
           </AnimatePresence>
 
           <motion.div
@@ -578,6 +586,7 @@ function About() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-16 text-center"
+            data-aos="fade-up" data-aos-delay="1000"
           >
             <motion.a 
               href="#contact" 
