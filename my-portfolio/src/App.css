@@ -93,3 +93,16 @@
   bottom: 0;
   left: 0;
 }
+
+/* Add this to your existing styles */
+* {
+  cursor: none;
+}
+
+/* This will show the default cursor on clickable elements */
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
