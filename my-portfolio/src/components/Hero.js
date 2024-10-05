@@ -1,84 +1,103 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import rocketImage from './assets/rocket.png';
 
-function Hero() {
+
+const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full bg-gray-900 text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 opacity-30 animate-pulse">
-          <div className="absolute top-0 left-0 w-full h-full bg-repeat" style={{backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMjEyMTIxIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMzYTNhM2EiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')"}}>
-          </div>
-        </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0B0B0F] to-[#1C1C22] overflow-hidden">
+      {/* Stars background */}
+      <div className="absolute inset-0">
+        {[...Array(200)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${Math.random() * 2 + 1}px`,
+              height: `${Math.random() * 2 + 1}px`,
+              opacity: Math.random() * 0.5 + 0.5,
+              animation: `twinkle ${Math.random() * 5 + 5}s infinite`
+            }}
+          />
+        ))}
       </div>
-      <div className="relative z-10 flex items-center justify-center min-h-screen w-full px-4 py-16 md:py-24">
-        <div className="w-full max-w-7xl">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            {/* Left side - Content */}
-            <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                Hi, I'm <span className="text-blue-400">Your Name</span>
-              </h1>
-              <div className="h-12 overflow-hidden mb-4">
-                <ul className="animate-slide text-2xl md:text-3xl font-semibold text-gray-300">
-                  <li>Full Stack Developer</li>
-                  <li>Software Engineer</li>
-                  <li>Problem Solver</li>
-                  <li>Tech Enthusiast</li>
-                </ul>
-              </div>
-              <p className="text-lg md:text-xl text-gray-400 mb-8">
-                Crafting elegant solutions to complex problems through code.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                <a 
-                  href="#projects" 
-                  className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-md transition duration-300 hover:bg-blue-600 hover:shadow-lg"
-                >
-                  View My Projects
-                </a>
-                <a 
-                  href="#contact" 
-                  className="px-8 py-3 bg-transparent text-blue-400 font-semibold rounded-md border-2 border-blue-400 transition duration-300 hover:bg-blue-400 hover:text-gray-900 hover:shadow-lg"
-                >
-                  Get In Touch
-                </a>
-              </div>
-            </div>
 
-            {/* Right side - Code Animation */}
-            <div className="w-full md:w-1/2 md:pl-8">
-              <div className="bg-gray-800 p-4 rounded-lg shadow-lg overflow-hidden">
-                <pre className="text-sm md:text-base">
-                  <code className="language-javascript">
-                    {`function Developer() {
-  const [skills, setSkills] = useState([
-    'JavaScript', 'React', 'Node.js',
-    'Python', 'SQL', 'Git'
-  ]);
+      <div className="container mx-auto px-4 z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Left side - Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold text-[#B8A04A] mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              John Doe
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl text-gray-300 mb-8"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Full Stack Developer
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="space-y-4 md:space-y-0 md:space-x-4"
+            >
+              <motion.a
+                href="#projects"
+                className="inline-block bg-[#B8A04A] text-black py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#D4BA5A] transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Projects
+              </motion.a>
+              <motion.a
+                href="#contact"
+                className="inline-block bg-transparent border-2 border-[#B8A04A] text-[#B8A04A] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#B8A04A] hover:text-black transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Me
+              </motion.a>
+            </motion.div>
+          </div>
 
-  const levelUp = () => {
-    // Always learning and improving
-    setSkills([...skills, 'New Skill']);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(levelUp, 86400000); // Every day
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <CodingMachine skills={skills} />
-  );
-}`}
-                  </code>
-                </pre>
-              </div>
-            </div>
+          {/* Right side - Rocket PNG Animation */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <motion.div 
+              className="relative w-64 h-96"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.img
+              src={rocketImage} 
+              alt="Rocket"
+                className="w-full h-full object-contain"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+              {/* Rocket flames */}
+              <motion.div 
+                className="absolute -bottom-16 left-1/2 transform -translate-x-1/2"
+                animate={{ scaleY: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
+                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="w-16 h-32 bg-gradient-to-t from-orange-500 via-yellow-500 to-transparent rounded-full filter blur-sm" />
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;
