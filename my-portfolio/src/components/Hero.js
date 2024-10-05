@@ -1,14 +1,14 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import rocketImage from './assets/rocket.png';
-
+import astronautImage from './assets/astronaut.png'; // You'll need to add this image
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0B0B0F] to-[#1C1C22] overflow-hidden">
-      {/* Stars background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Twinkling stars effect */}
       <div className="absolute inset-0">
-        {[...Array(200)].map((_, i) => (
+        {[...Array(50)].map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-white"
@@ -17,24 +17,50 @@ const Hero = () => {
               left: `${Math.random() * 100}%`,
               width: `${Math.random() * 2 + 1}px`,
               height: `${Math.random() * 2 + 1}px`,
-              opacity: Math.random() * 0.5 + 0.5,
-              animation: `twinkle ${Math.random() * 5 + 5}s infinite`
+              animationDuration: `${Math.random() * 3 + 2}s`,
+              animationDelay: `${Math.random() * 2}s`,
             }}
           />
         ))}
       </div>
+
+      {/* Floating planets */}
+      <motion.div
+        className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-purple-500 opacity-75"
+        animate={{
+          y: [0, -20, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-blue-500 opacity-75"
+        animate={{
+          y: [0, 20, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left side - Content */}
           <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold text-[#B8A04A] mb-4"
+              className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              John Doe
+              Exploring the Digital Cosmos
             </motion.h1>
             <motion.p
               className="text-xl md:text-2xl text-gray-300 mb-8"
@@ -42,7 +68,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Full Stack Developer
+              Full Stack Developer & Space Enthusiast
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,46 +78,59 @@ const Hero = () => {
             >
               <motion.a
                 href="#projects"
-                className="inline-block bg-[#B8A04A] text-black py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#D4BA5A] transition-colors duration-300"
+                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View Projects
+                Launch Projects
               </motion.a>
               <motion.a
                 href="#contact"
-                className="inline-block bg-transparent border-2 border-[#B8A04A] text-[#B8A04A] py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#B8A04A] hover:text-black transition-colors duration-300"
+                className="inline-block bg-transparent border-2 border-purple-500 text-purple-500 py-3 px-8 rounded-full text-lg font-semibold hover:bg-purple-500 hover:text-white transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Me
+                Contact Mission Control
               </motion.a>
             </motion.div>
           </div>
 
-          {/* Right side - Rocket PNG Animation */}
+          {/* Right side - Astronaut Animation */}
           <div className="w-full md:w-1/2 flex justify-center">
             <motion.div 
               className="relative w-64 h-96"
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <motion.img
-              src={rocketImage} 
-              alt="Rocket"
+                src={astronautImage} 
+                alt="Floating Astronaut"
                 className="w-full h-full object-contain"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                animate={{
+                  y: [0, -20, 0],
+                  rotate: [0, 5, 0, -5, 0],
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
-              {/* Rocket flames */}
+              {/* Space debris */}
               <motion.div 
-                className="absolute -bottom-16 left-1/2 transform -translate-x-1/2"
-                animate={{ scaleY: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="w-16 h-32 bg-gradient-to-t from-orange-500 via-yellow-500 to-transparent rounded-full filter blur-sm" />
-              </motion.div>
+                className="absolute top-1/4 right-1/4 w-4 h-4 bg-gray-400 rounded-full"
+                animate={{
+                  x: [0, 50, 0],
+                  y: [0, 30, 0],
+                  rotate: 360,
+                }}
+                transition={{
+                  duration: 15,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              />
             </motion.div>
           </div>
         </div>
