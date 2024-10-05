@@ -8,38 +8,37 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import SpaceBackground from './components/SpaceBackground';
-import CustomCursor from './components/CustomCursor'; // We'll create this component
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const mouseMove = (e) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
-      });
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener('mousemove', updateMousePosition);
 
     return () => {
-      window.removeEventListener("mousemove", mouseMove);
+      window.removeEventListener('mousemove', updateMousePosition);
     };
   }, []);
 
   return (
-    <div className="App relative cursor-none"> {/* Add cursor-none class */}
+    <>
       <CustomCursor mousePosition={mousePosition} />
-      <SpaceBackground />
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+      <div className="App relative cursor-none">
+        <SpaceBackground />
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
 
