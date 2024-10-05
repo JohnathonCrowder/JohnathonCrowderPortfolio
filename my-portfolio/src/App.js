@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <CustomCursor mousePosition={mousePosition} />
-      <div className="App relative cursor-none">
+      <div className="App relative">
         <SpaceBackground />
         <Navbar />
         <Hero />

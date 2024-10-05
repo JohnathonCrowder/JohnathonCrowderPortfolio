@@ -185,3 +185,7 @@ a,
 button {
   cursor: none;
 }
+
+.custom-cursor {
+  pointer-events: none;
+}
