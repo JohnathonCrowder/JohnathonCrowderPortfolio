@@ -38,7 +38,7 @@ const InteractiveImage = () => {
       >
         <img 
           src="https://via.placeholder.com/400x500" 
-          alt="John Doe"
+          alt="Johnathon Crowder"
           className="object-cover w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] via-transparent"></div>
@@ -126,43 +126,43 @@ const ExpandedStory = () => {
       year: "2015",
       description: "My journey in software development began with a simple 'Hello, World!' program, igniting a passion that would define my career.",
       details: [
-        "Discovered programming through web development",
-        "Built my first website using HTML and CSS",
-        "Learned JavaScript fundamentals",
-        "Contributed to open-source projects"
+        "Discovered programming through my highschool Robotics Team",
+        "Worked with team to program robots using python",
+        "Enrolled in two years of Software Engineering courses",
+        "Developed individual projects using Python and Javascript"
       ]
     },
     {
       title: "Growth & Learning",
-      year: "2017",
+      year: "2018",
       description: "As my skills evolved, I embraced modern frameworks and deeper technical concepts, laying the foundation for more complex projects.",
       details: [
-        "Mastered React and Node.js",
-        "Developed full-stack applications",
-        "Attended tech conferences and workshops",
-        "Started mentoring junior developers"
+        "Mastered Python and Javascript",
+        "Shifted focus from Robotics to Web Design",
+        "Learned React and Flask for web development",
+        "Learned cloud technologies for deployment"
       ]
     },
     {
-      title: "Professional Excellence",
-      year: "2019",
-      description: "With experience came the ability to architect sophisticated solutions and lead teams to successful project completions.",
+      title: "Freelancing Journey",
+      year: "2020",
+      description: "With growing expertise, I transitioned into freelancing, where I embraced the opportunity to create innovative solutions and collaborate with diverse clients on impactful projects.",
       details: [
-        "Led development of enterprise applications",
-        "Implemented microservices architecture",
-        "Optimized performance and scalability",
-        "Presented at tech meetups and events"
+        "Launched my freelance career, expanding my professional skillset",
+        "Developed full-stack applications tailored to client needs",
+        "Mastered React and Node.js to deliver dynamic web applications",
+        "Provided ongoing support and maintenance for clients’ projects"
       ]
     },
     {
       title: "Current Chapter",
-      year: "2021",
-      description: "Today, I continue to push boundaries, embracing new technologies and methodologies while sharing knowledge with the community.",
+      year: "2024",
+      description: "Currently, I balance my role in testing AI models with a vibrant freelance career, allowing me to explore innovative solutions across different fields.",
       details: [
-        "Specializing in cloud-native solutions",
-        "Contributing to technical publications",
-        "Developing innovative side projects",
-        "Exploring emerging technologies"
+        "Conducting in-depth testing and evaluation of AI models",
+        "Experimenting with emerging AI technologies",
+        " Managing freelance projects that include web development, data analysis, and more",
+        " Continuously expanding my skill set to stay ahead in both AI technologies and freelance development"
       ]
     }
   ];
@@ -176,7 +176,7 @@ const ExpandedStory = () => {
     {
       icon: "🔮",
       title: "Innovator",
-      description: "Constantly exploring new technologies and methodologies to push the boundaries of what's possible in web development."
+      description: "Constantly exploring new technologies and methodologies to push the boundaries of what's possible in Software Development."
     },
     {
       icon: "🤝",
@@ -273,119 +273,119 @@ const InteractiveTimeline = () => {
   
   const experiences = [
     {
-      company: "TechCorp",
-      role: "Senior Software Engineer",
-      period: "2021 - Present",
-      description: "Leading innovative solutions for enterprise-scale applications, focusing on cloud-native architectures and team leadership.",
-      technologies: ["React", "Node.js", "AWS", "Kubernetes"],
-      achievements: [
+      "company": "FIRST Robotics Team",
+      "role": "Aspiring Programmer",
+      "period": "2015 - 2018",
+      "description": "Developed programming skills through hands-on experience in robotics, focusing on team collaboration and problem-solving.",
+      "technologies": ["C++, Python", "LabView", "Arduino", "Git", "Computer Vision"],
+      "achievements": [
         {
-          title: "Performance Optimization",
-          description: "Improved system performance by 40% through innovative caching strategies and code optimization.",
-          icon: "📈"
+          "title": "Robotics Programming",
+          "description": "Contributed to programming the robot's behavior, leading to a successful performance in regional competitions.",
+          "icon": "🤖"
         },
         {
-          title: "Team Leadership",
-          description: "Led and mentored a team of 5 developers, implementing agile methodologies and best practices.",
-          icon: "👥"
+          "title": "Team Collaboration",
+          "description": "Collaborated with a diverse team of students, fostering a spirit of innovation and teamwork to overcome challenges.",
+          "icon": "👥"
         },
         {
-          title: "Architecture Modernization",
-          description: "Spearheaded the transition to a microservices architecture, enhancing scalability and maintainability.",
-          icon: "🏗️"
+          "title": "Code Efficiency",
+          "description": "Refined existing code to improve execution speed by 25%, optimizing the robot's performance during critical tasks.",
+          "icon": "⚡"
         },
         {
-          title: "DevOps Enhancement",
-          description: "Reduced deployment time by 60% by implementing automated CI/CD pipelines and infrastructure as code.",
-          icon: "⚡"
+          "title": "Mentorship Initiative",
+          "description": "Mentored junior team members in programming concepts and robotics fundamentals, fostering a culture of learning.",
+          "icon": "👨‍🏫"
         }
       ],
-      keyProjects: [
+      "keyProjects": [
         {
-          name: "Enterprise Dashboard",
-          description: "Led the development of a real-time analytics dashboard processing millions of data points daily."
+          "name": "Robot Control Interface",
+          "description": "Developed an intuitive user interface for real-time control and monitoring of the robot's functions during competitions."
         },
         {
-          name: "API Gateway",
-          description: "Designed and implemented a centralized API gateway handling 1000+ requests per second."
+          "name": "Sensor Integration System",
+          "description": "Designed a system to integrate various sensors, enabling enhanced decision-making capabilities for the robot."
         }
       ]
     },
     {
-      company: "InnovateSoft",
-      role: "Full Stack Developer",
-      period: "2019 - 2021",
-      description: "Architected and developed comprehensive full-stack solutions, focusing on scalability and user experience.",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-      achievements: [
+      "company": "Freelance Developer",
+      "role": "Full Stack Developer",
+      "period": "2019 - Present",
+      "description": "Bringing ideas to life through custom web solutions, I specialize in crafting immersive websites and insightful dashboards that drive engagement and empower businesses.",
+      "technologies": ["Python", "JavaScript", "HTML", "CSS", "Flask", "React"],
+      "achievements": [
         {
-          title: "User Engagement",
-          description: "Increased user engagement by 25% through UI/UX improvements and performance optimization.",
-          icon: "🎯"
+          "title": "Tailored Web Solutions",
+          "description": "Delivered 20+ custom websites that enhance client visibility and user interaction, helping businesses thrive in a competitive digital landscape.",
+          "icon": "🚀"
         },
         {
-          title: "Component Library",
-          description: "Developed a reusable component library, reducing development time for new features by 30%.",
-          icon: "🏗️"
+          "title": "Data Visualization Expert",
+          "description": "Designed interactive dashboards that convert complex datasets into clear, actionable insights, empowering clients to make strategic decisions.",
+          "icon": "📊"
         },
         {
-          title: "Database Optimization",
-          description: "Optimized database queries, resulting in a 50% reduction in average response time.",
-          icon: "⚡"
+          "title": "Diverse Technical Skills",
+          "description": "Applied a broad skill set in software development to create automation tools and analytical scripts, enhancing productivity and efficiency.",
+          "icon": "🔧"
         },
         {
-          title: "Automation",
-          description: "Implemented CI/CD pipeline, reducing deployment errors by 75% and improving team efficiency.",
-          icon: "🤖"
+          "title": "Client-Focused Approach",
+          "description": "Achieved a 95% client satisfaction rate through personalized solutions and a commitment to exceeding expectations.",
+          "icon": "🤝"
         }
       ],
-      keyProjects: [
+      "keyProjects": [
         {
-          name: "E-commerce Platform",
-          description: "Built a scalable e-commerce platform handling 10,000+ daily transactions."
+          "name": "E-Commerce Transformation",
+          "description": "Engineered a robust e-commerce platform that increased sales by 40% through enhanced user experience and streamlined checkout processes."
         },
         {
-          name: "CMS System",
-          description: "Developed a custom CMS enabling non-technical users to manage complex content workflows."
+          "name": "Advanced Analytics Dashboard",
+          "description": "Developed a sophisticated dashboard that aggregates and visualizes business metrics, enabling clients to track performance and identify growth opportunities."
         }
       ]
     },
     {
-      company: "WebPioneers",
-      role: "Frontend Developer",
-      period: "2017 - 2019",
-      description: "Specialized in crafting responsive, user-centric interfaces with a focus on accessibility and performance.",
-      technologies: ["React", "TypeScript", "SASS", "Jest"],
-      achievements: [
+      "company": "DataAnnotation",
+      "role": "AI Specialist",
+      "period": "2023 - Present",
+      "description": "Involved in strategic initiatives to enhance AI capabilities and performance across various applications, focusing on innovative training approaches.",
+      "technologies": ["Python", "Machine Learning", "Data Processing", "Cloud Technologies"],
+      "achievements": [
         {
-          title: "Design System",
-          description: "Created a comprehensive design system, improving consistency across multiple applications.",
-          icon: "🎨"
+          "title": "Performance Improvement",
+          "description": "Played a key role in enhancing overall model effectiveness through targeted strategies and collaborative efforts.",
+          "icon": "📈"
         },
         {
-          title: "Performance",
-          description: "Reduced load time by 30% through code splitting and lazy loading implementation.",
-          icon: "⚡"
+          "title": "Process Innovation",
+          "description": "Contributed to the optimization of training processes, resulting in improved efficiency and project outcomes.",
+          "icon": "🔄"
         },
         {
-          title: "A/B Testing",
-          description: "Implemented A/B testing framework, leading to a 15% increase in conversion rates.",
-          icon: "🔬"
+          "title": "Team Collaboration",
+          "description": "Fostered collaboration with various teams to align AI initiatives with broader organizational goals.",
+          "icon": "🤝"
         },
         {
-          title: "Accessibility",
-          description: "Improved accessibility compliance to WCAG 2.1 AA standards across all projects.",
-          icon: "♿"
+          "title": "Data Quality Assurance",
+          "description": "Implemented quality assurance measures to enhance the accuracy and reliability of training datasets.",
+          "icon": "📚"
         }
       ],
-      keyProjects: [
+      "keyProjects": [
         {
-          name: "Marketing Website",
-          description: "Developed a high-performance marketing website with interactive data visualizations."
+          "name": "AI Development Initiative",
+          "description": "Engaged in an initiative aimed at advancing AI applications through innovative training methods."
         },
         {
-          name: "Progressive Web App",
-          description: "Built a PWA achieving a 90+ Lighthouse score across all categories."
+          "name": "Performance Analysis",
+          "description": "Contributed to the use of a framework for analyzing AI performance metrics, driving continuous improvement."
         }
       ]
     }
@@ -548,10 +548,9 @@ function About() {
               <InteractiveImage />
             </div>
             <div className="flex flex-col justify-center" data-aos="fade-left" data-aos-delay="400">
-              <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">John Doe</h3>
+              <h3 className="text-2xl font-light text-[#E8E8E8] mb-6">Johnathon Crowder</h3>
               <p className="text-[#A0A0A8] mb-8 leading-relaxed">
-                Passionate full-stack developer with 5+ years of experience in crafting innovative web solutions. Committed to pushing the boundaries of what's possible in web development while maintaining a focus on user experience and performance.
-              </p>
+              As a full-stack developer with 5+ years of experience, I excel at creating comprehensive web applications that enhance user engagement and satisfaction. My proficiency in both front-end and back-end technologies allows me to craft solutions that are not only functional but also visually appealing. I am driven by a passion for innovation and a commitment to quality, always seeking to collaborate with others to produce exceptional outcomes.              </p>
               <InteractiveStats />
             </div>
           </div>
