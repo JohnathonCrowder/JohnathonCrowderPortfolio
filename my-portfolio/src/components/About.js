@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import profilePhoto from './assets/profilePhoto.png'; 
 
 
 
@@ -37,7 +38,7 @@ const InteractiveImage = () => {
         transition={{ duration: 0.3 }}
       >
         <img 
-          src="https://via.placeholder.com/400x500" 
+          src={profilePhoto} 
           alt="Johnathon Crowder"
           className="object-cover w-full h-full"
         />
@@ -544,7 +545,7 @@ function About() {
           
           {/* Personal Info and Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
-            <div data-aos="fade-right" data-aos-delay="200">
+            <div  data-aos="fade-right" data-aos-delay="200">
               <InteractiveImage />
             </div>
             <div className="flex flex-col justify-center" data-aos="fade-left" data-aos-delay="400">

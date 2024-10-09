@@ -61,8 +61,8 @@ function Contact() {
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <i className="fas fa-envelope text-[#8EC38E] mr-4"></i>
-                  <a href="mailto:johndoe@example.com" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
-                    johndoe@example.com
+                  <a href="mailto:johnathoncrowder@gmail.com" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
+                    JohnathonCrowder@gmail.com
                   </a>
                 </motion.div>
                 <motion.div 
@@ -70,8 +70,8 @@ function Contact() {
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <i className="fas fa-phone text-[#8EC38E] mr-4"></i>
-                  <a href="tel:+1123456789" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
-                    +1 (123) 456-7890
+                  <a href="tel:+16183162840" className="text-[#A0A0A8] hover:text-[#8EC38E] transition-colors">
+                    +1 (618) 316-2840 
                   </a>
                 </motion.div>
               </div>

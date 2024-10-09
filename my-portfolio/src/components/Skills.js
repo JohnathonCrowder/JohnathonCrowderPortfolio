@@ -110,18 +110,23 @@ const SkillsSection = () => {
       bgColor: 'bg-[#1E1E24]',
       accentColor: 'bg-[#8EC38E]',
       experience: '5+',
-      description: 'Crafting immaculate digital experiences through meticulous attention to detail and innovative design principles.',
+      description: "Creating seamless digital experiences through a blend of meticulous design and cutting-edge technology.",
       keyPoints: [
         'Bespoke component architecture with unparalleled precision',
         'State management solutions of the highest caliber',
         'Impeccable user experience design methodology',
         'Performance optimization to absolute perfection'
       ],
-      skills: [
-        { name: 'React Mastery', yearsExp: 4, projects: 15, description: 'Architecting distinguished web experiences with unmatched expertise' },
-        { name: 'TypeScript Proficiency', yearsExp: 3, projects: 12, description: 'Ensuring code excellence through superior type safety' },
-        { name: 'Next.js Innovation', yearsExp: 2, projects: 8, description: 'Pioneering server-rendered applications of exceptional quality' },
-        { name: 'Elite UI/UX Craft', yearsExp: 5, projects: 20, description: 'Designing interfaces that exemplify sophistication' },
+      "skills": [
+        { name: "React", yearsExp: 2, projects: 2, description: "Building high-quality web applications with exceptional attention to detail" },
+        { name: "Next.js", yearsExp: 2, projects: 8, description: "Developing high-performance server-rendered applications" },
+        { name: "UI/UX Design", yearsExp: 5, projects: 20, description: "Crafting user interfaces that reflect elegance and usability" },
+        { name: "CSS/SASS", yearsExp: 4, projects: 15, description: "Implementing advanced styling techniques for visually appealing designs" },
+        { name: "Responsive Web Design", yearsExp: 4, projects: 10, description: "Ensuring optimal user experiences across all devices and screen sizes" },
+        { name: "Version Control", yearsExp: 5, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
+        { name: "JavaScript", yearsExp: 4, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
+        { name: "Html", yearsExp: 4, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
+        { name: "Agile Development Practices", yearsExp: 3, projects: 12, description: "Fostering collaboration and flexibility in project management" }
       ]
     },
     {
@@ -138,10 +143,14 @@ const SkillsSection = () => {
         'API designs that epitomize RESTful principles'
       ],
       skills: [
-        { name: 'Node.js Expertise', yearsExp: 4, projects: 12, description: 'Crafting server-side solutions with exceptional sophistication' },
-        { name: 'Python Mastery', yearsExp: 3, projects: 10, description: 'Developing elegant, efficient backend systems' },
-        { name: 'Database Artistry', yearsExp: 4, projects: 15, description: 'Architecting data solutions with unmatched precision' },
-        { name: 'API Craftsmanship', yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: 'Node.js', yearsExp: 4, projects: 12, description: 'Crafting server-side solutions with exceptional sophistication' },
+        { name: 'Python', yearsExp: 3, projects: 10, description: 'Developing elegant, efficient backend systems' },
+        { name: 'Database Architecture', yearsExp: 4, projects: 15, description: 'Architecting data solutions with unmatched precision' },
+        { name: "API's", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: "SQL / NoSQL", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: "Automated Testing", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: "Flask", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: "Data Visualization", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
       ]
     },
     {
