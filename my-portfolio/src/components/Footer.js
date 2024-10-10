@@ -9,7 +9,7 @@ function Footer() {
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-light text-[#E8E8E8] mb-4">John Doe</h3>
+            <h3 className="text-2xl font-light text-[#E8E8E8] mb-4">Johnathon Crowder</h3>
             <p className="text-[#A0A0A8]">Full Stack Developer</p>
           </div>
           <div className="text-center">
@@ -71,7 +71,7 @@ function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t border-[#32323A]">
           <p className="text-center text-[#A0A0A8]">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} Johnathon Crowder. All rights reserved.
           </p>
         </div>
       </div>
