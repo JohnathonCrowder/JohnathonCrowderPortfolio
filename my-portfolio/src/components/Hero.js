@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useViewportScroll, useTransform, useSpring } from 'framer-motion';
-import galaxyImage from './assets/galaxy.png'; // You'll need to add this image
-import planetImage from './assets/planet.png'; // You'll need to add this image
-import rocketImage from './assets/rocket.png'; // You'll need to add this image
+import galaxyImage from './assets/galaxy.png'; 
+import planetImage from './assets/planet.png'; 
+import rocketImage from './assets/rocket.png'; 
 
 const Hero = () => {
   const { scrollYProgress } = useViewportScroll();

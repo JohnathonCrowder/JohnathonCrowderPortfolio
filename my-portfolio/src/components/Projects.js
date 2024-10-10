@@ -1,5 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import greenthumbImg from './assets/greenthumb.png';
+import webdesignImg from './assets/webdesign.png';
+import junkremovalImg from './assets/junkremoval.png';
+import heartdachImg from './assets/heartdach.png';
+import pawfinderImg from './assets/pawfinder.png';
+import resumeImg from './assets/resume.png';
+
+
+
 
 const ProjectCard = ({ project }) => {
   return (
@@ -14,7 +23,7 @@ const ProjectCard = ({ project }) => {
       <div className="relative h-48">
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${project.image})` }}
+          style={{ backgroundImage: `url(${project.image}` }}
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         />
@@ -72,37 +81,54 @@ const CosmicDivider = () => (
 function Projects() {
   const projects = [
     {
-      title: "Nebula E-commerce",
-      description: "A full-stack e-commerce platform with cosmic product offerings.",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      title: "PawFinderPlus",
+      description: "A website for connecting Dog Breeders with Clients. Also helps breeders track financial records.",
+      image: pawfinderImg,
+      technologies: ["Flask", "Python", "SqlAlchemy", "TailwindCss"],
+      link: "https://pawfinderplus.onrender.com/",
+      github: "#",
+    },
+    {
+      title: "GreenThumb Landscaping",
+      description: "A Demo Website for a landscaping company, created with python and flask.",
+      image: greenthumbImg,
+      technologies: ["Flask", "Python", "SqlAlchemy", "TailwindCss"],
+      link: "https://landscape-website.onrender.com",
+      github: "#",
+    },
+    {
+      title: "Heartland Dachshunds",
+      description: "A Demo Website for a dog breeder, featuring easy puppy and litter management.",
+      image: heartdachImg,
+      technologies: ["JavaScript", "Python", "Flask", "SqlAlchemy"],
+      link: "https://heartlanddachshunds.onrender.com/",
+      github: "#",
+    },
+    {
+      title: "Simmons Family Junk Removal",
+      description: "A Demo website created for a local buiseness. Includes easy to use blog system to increase SEO. ",
+      image: junkremovalImg,
+      technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
+      link: "https://simmonsfamilyjunkremoval.onrender.com/",
+      github: "#",
+    },
+    {
+      title: "Portfolio Website",
+      description: "This would be the website your looking at now, it was created with react and node.js",
+      image: resumeImg,
+      technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
       link: "#",
       github: "#",
     },
     {
-      title: "Astro Task Manager",
-      description: "A stellar web application for managing tasks across the galaxy.",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["Vue.js", "Firebase", "Vuex"],
-      link: "#",
+      title: "Personal Web-design Website",
+      description: "This is a site i created to help find myself freelance web-design work.",
+      image: webdesignImg,
+      technologies: ["Flask", "Python", "Javascript", "TailwindCss"],
+      link: "https://websitedevelopment.onrender.com/",
       github: "#",
     },
-    {
-      title: "Cosmic Weather Forecast",
-      description: "Real-time weather dashboard for tracking atmospheric conditions on distant planets.",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["JavaScript", "APIs", "Chart.js"],
-      link: "#",
-      github: "#",
-    },
-    {
-      title: "Interstellar Analytics",
-      description: "Data visualization tool for tracking social media metrics across the cosmos.",
-      image: "https://via.placeholder.com/300x200",
-      technologies: ["Python", "Django", "D3.js"],
-      link: "#",
-      github: "#",
-    },
+    
   ];
 
   return (
@@ -115,9 +141,9 @@ function Projects() {
           className="text-center"
         >
           <h2 className="text-5xl font-light text-[#E8E8E8] mb-6 tracking-wide">
-            <span className="text-[#8EC38E]">✦</span> Cosmic Creations <span className="text-[#8EC38E]">✦</span>
+            <span className="text-[#8EC38E]">✦</span> Favorite Projects <span className="text-[#8EC38E]">✦</span>
           </h2>
-          <p className="text-xl text-[#A0A0A8] font-light mb-12">Explore the digital galaxies I've crafted</p>
+          <p className="text-xl text-[#A0A0A8] font-light mb-12">Explore some of the websites I've crafted</p>
         </motion.div>
 
         <CosmicDivider />

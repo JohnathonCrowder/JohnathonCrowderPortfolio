@@ -187,7 +187,7 @@ const SkillsSection = () => {
           }}
           className="text-center"
         >
-          <h2 className="text-5xl font-light text-[#E8E8E8] mb-6 tracking-wide">Technical Expertise</h2>
+          <h2 className="text-5xl font-light text-[#E8E8E8] mb-6 tracking-wide">Professional Skills</h2>
           <p className="text-xl text-[#A0A0A8] font-light tracking-wider">Mastering the art of modern web technologies</p>
         </motion.div>
 
