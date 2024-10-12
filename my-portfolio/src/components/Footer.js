@@ -16,11 +16,7 @@ function Footer() {
             <h4 className="text-xl font-light text-[#E8E8E8] mb-4">Quick Links</h4>
             <nav>
               <ul className="space-y-2">
-                <li>
-                  <a href="#home" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors duration-300">
-                    Home
-                  </a>
-                </li>
+                
                 <li>
                   <a href="#about" className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors duration-300">
                     About
@@ -43,7 +39,7 @@ function Footer() {
             <h4 className="text-xl font-light text-[#E8E8E8] mb-4">Connect</h4>
             <div className="flex justify-center md:justify-end space-x-4">
               <motion.a 
-                href="#" 
+                href="https://www.linkedin.com/in/johnathon-crowder-465645281/" 
                 className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -51,21 +47,14 @@ function Footer() {
                 <i className="fab fa-linkedin fa-2x"></i>
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://github.com/JohnathonCrowder" 
                 className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <i className="fab fa-github fa-2x"></i>
               </motion.a>
-              <motion.a 
-                href="#" 
-                className="text-[#A0A0A8] hover:text-[#B8A04A] transition-colors duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <i className="fab fa-twitter fa-2x"></i>
-              </motion.a>
+              
             </div>
           </div>
         </div>
