@@ -25,7 +25,7 @@ const InteractiveImage = () => {
   
   return (
     <motion.div
-      className="relative cursor-pointer"
+      className="relative cursor-pointer" 
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ 
