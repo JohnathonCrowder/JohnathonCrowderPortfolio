@@ -32,8 +32,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-[#1C1C22]/80 backdrop-blur-sm z-50 py-4 shadow-md">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="text-[#8EC38E] text-2xl font-bold">
-          John Doe
-        </a>
+Johnathon Crowder        </a>
 
         <div className="hidden md:flex items-center space-x-8">
           <motion.a

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import emailjs from 'emailjs-com';
 
 const LuxuryDivider = () => (
   <div className="flex items-center justify-center my-16">
@@ -28,8 +29,16 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+
+    // Send email using EmailJS
+    emailjs.send('service_mpz8rn8', 'template_8beclsf', formData, 'eVXBfW_ymEVNPGIf8')
+      .then((response) => {
+        console.log('Email sent successfully:', response.status, response.text);
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      }, (error) => {
+        console.error('Failed to send email:', error);
+      });
   };
 
   return (
