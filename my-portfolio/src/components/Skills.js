@@ -23,7 +23,6 @@ const SkillCard = ({ skill, category, index }) => {
         <p className="text-[#A0A0A8] text-sm mb-4 h-20 overflow-hidden">{skill.description}</p>
         <div className="flex justify-between text-sm font-light">
           <span className="text-[#8EC38E]">{skill.yearsExp} Years Experience</span>
-          <span className="text-[#707078]">{skill.projects} Elite Projects</span>
         </div>
       </div>
     </motion.div>
@@ -107,27 +106,75 @@ const SkillsSection = () => {
     {
       name: 'Frontend Development',
       icon: '🎨',
-      bgColor: 'bg-[#1E1E24]',
+      bgColor: 'bg-[#1E1E24]', 
       accentColor: 'bg-[#8EC38E]',
-      experience: '5+',
+      experience: '4+',
       description: "Creating seamless digital experiences through a blend of meticulous design and cutting-edge technology.",
       keyPoints: [
-        'Bespoke component architecture with unparalleled precision',
-        'State management solutions of the highest caliber',
-        'Impeccable user experience design methodology',
-        'Performance optimization to absolute perfection'
-      ],
+        'Custom component architecture designed for flexibility and reusability',
+        'Efficient state management ensuring optimal performance in dynamic applications',
+        'User experience strategies focused on accessibility and user satisfaction',
+        'Thorough performance enhancements leading to faster load times and smoother interactions'
+    ],
       "skills": [
-        { name: "React", yearsExp: 2, projects: 2, description: "Building high-quality web applications with exceptional attention to detail" },
-        { name: "Next.js", yearsExp: 2, projects: 8, description: "Developing high-performance server-rendered applications" },
-        { name: "UI/UX Design", yearsExp: 5, projects: 20, description: "Crafting user interfaces that reflect elegance and usability" },
-        { name: "CSS/SASS", yearsExp: 4, projects: 15, description: "Implementing advanced styling techniques for visually appealing designs" },
-        { name: "Responsive Web Design", yearsExp: 4, projects: 10, description: "Ensuring optimal user experiences across all devices and screen sizes" },
-        { name: "Version Control", yearsExp: 5, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
-        { name: "JavaScript", yearsExp: 4, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
-        { name: "Html", yearsExp: 4, projects: 25, description: "Managing code efficiently and collaborating effectively within teams" },
-        { name: "Agile Development Practices", yearsExp: 3, projects: 12, description: "Fostering collaboration and flexibility in project management" }
-      ]
+        {
+            name: "React",
+            yearsExp: 2,
+            projects: 2,
+            description: "Skilled in building high-quality web applications using React, focusing on component-driven architecture and delivering responsive, user-friendly interfaces."
+        },
+        {
+            name: "UI/UX Design",
+            yearsExp: 4,
+            projects: 20,
+            description: "Expert in crafting user interfaces that balance elegance and usability, ensuring that designs not only look good but also provide a seamless user experience."
+        },
+        {
+            name: "CSS/SASS",
+            yearsExp: 4,
+            projects: 15,
+            description: "Proficient in implementing advanced styling techniques using CSS and SASS to create visually appealing and maintainable designs that elevate the overall aesthetic of web applications."
+        },
+        {
+            name: "Responsive Web Design",
+            yearsExp: 4,
+            projects: 20,
+            description: "Experienced in ensuring optimal user experiences across all devices and screen sizes through responsive design techniques that adapt layouts and components effectively."
+        },
+        
+        {
+            name: "JavaScript",
+            yearsExp: 4,
+            projects: 25,
+            description: "Proficient in JavaScript for building dynamic web applications, with a strong focus on developing efficient code and implementing modern JavaScript features to enhance functionality."
+        },
+        {
+            name: "HTML",
+            yearsExp: 4,
+            projects: 25,
+            description: "Skilled in using HTML to create semantic, accessible web content, ensuring a solid foundation for web applications that improves SEO and user experience."
+        },
+        {
+          name: "Tailwind CSS",
+          yearsExp: 4,
+          projects: 3,
+          description: "Skilled in using Tailwind CSS for utility-first styling, enabling rapid UI development and consistent design across applications."
+      },
+      {
+          name: "SEO Optimization",
+          yearsExp: 3,
+          projects: 8,
+          description: "Proficient in implementing SEO best practices to enhance website visibility and drive organic traffic through on-page optimization."
+      },
+        {
+            name: "Agile Development Practices",
+            yearsExp: 4,
+            projects: 12,
+            description: "Experienced in fostering collaboration and flexibility in project management through Agile development practices, promoting iterative progress and responsive changes to project requirements."
+        }
+
+    ]
+    
     },
     {
       name: 'Backend Architecture',
@@ -135,22 +182,24 @@ const SkillsSection = () => {
       bgColor: 'bg-[#1E1E24]',
       accentColor: 'bg-[#8EC38E]',
       experience: '4+',
-      description: 'Engineering sophisticated server architectures with unparalleled attention to scalability and performance.',
-      keyPoints: [
-        'Architectural solutions of unprecedented elegance',
-        'Database designs optimized for ultimate efficiency',
-        'Security implementations of the highest standard',
-        'API designs that epitomize RESTful principles'
-      ],
+      description: 'Designing and implementing robust backend systems with a strong emphasis on scalability, performance, and security best practices.',
+    keyPoints: [
+        'Innovative architectural solutions focused on scalability and maintainability',
+        'Efficient database structures designed for optimal performance and reliability',
+        'Comprehensive security measures to safeguard data integrity and privacy',
+        'API designs that follow industry standards and enhance interoperability'
+    ],
       skills: [
-        { name: 'Node.js', yearsExp: 4, projects: 12, description: 'Crafting server-side solutions with exceptional sophistication' },
-        { name: 'Python', yearsExp: 3, projects: 10, description: 'Developing elegant, efficient backend systems' },
-        { name: 'Database Architecture', yearsExp: 4, projects: 15, description: 'Architecting data solutions with unmatched precision' },
-        { name: "API's", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
-        { name: "SQL / NoSQL", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
-        { name: "Automated Testing", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
-        { name: "Flask", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
-        { name: "Data Visualization", yearsExp: 3, projects: 14, description: 'Designing interfaces of exceptional clarity and efficiency' },
+        { name: 'Python', yearsExp: 9, projects: 10, description: 'Experienced Python developer with expertise in backend development, data processing, and automation. Proficient in building APIs, optimizing performance, and handling large datasets, with a strong focus on clean, scalable solutions.' },
+        { name: "Next.js", yearsExp: 2, projects: 8, description: "Experienced in developing modern web applications using Next.js. Skilled in building flexible, scalable solutions with a focus on user experience and performance." },
+        { name: 'Node.js', yearsExp: 2, projects: 12, description: 'Experienced in developing robust server-side applications with Node.js, leveraging its non-blocking architecture to create scalable and high-performance solutions.' },
+        { name: "Flask", yearsExp: 4, projects: 14, description: 'Expert in building scalable web applications and RESTful APIs with Flask, leveraging its lightweight framework for rapid development and deployment.' },
+        { name: 'Database Architecture', yearsExp: 4, projects: 15, description: 'Experienced in designing database structures that ensure data integrity and support complex queries, while leveraging best practices for security and efficiency.' },
+        { name: "API's", yearsExp: 4, projects: 14, description: 'Experienced in building versatile and scalable APIs that enable communication between services, with an emphasis on design, security, and documentation for developers.' },
+        { name: "SQL / NoSQL", yearsExp: 3, projects: 14, description: 'Proficient in designing and optimizing SQL and NoSQL databases to meet diverse data storage needs.' },
+        { name: "Automated Testing", yearsExp: 3, projects: 14, description: 'Experienced in implementing automated testing strategies to ensure software quality and reliability. Proficient in creating test suites that reduce bugs, and streamline development.' },
+        { name: "Data Visualization", yearsExp: 3, projects: 14, description: 'Specializing in crafting intuitive data dashboards and visual narratives that drive decision-making, utilizing matplotlib and pandas to transform complex data into clear, actionable insights.' },
+        
       ]
     },
     {
@@ -158,20 +207,52 @@ const SkillsSection = () => {
       icon: '🚀',
       bgColor: 'bg-[#1E1E24]',
       accentColor: 'bg-[#8EC38E]',
-      experience: '3+',
+      experience: '4+',
       description: 'Orchestrating deployment ecosystems with a focus on automation, reliability, and operational excellence.',
-      keyPoints: [
-        'Continuous Integration pipelines of supreme efficiency',
-        'Container orchestration with unmatched precision',
-        'Cloud architecture of exceptional scalability',
-        'Monitoring solutions providing unprecedented insights'
-      ],
-      skills: [
-        { name: 'Docker Virtuosity', yearsExp: 3, projects: 10, description: 'Containerization solutions of unparalleled sophistication' },
-        { name: 'AWS Architecture', yearsExp: 3, projects: 8, description: 'Cloud infrastructures designed with supreme expertise' },
-        { name: 'CI/CD Mastery', yearsExp: 3, projects: 12, description: 'Automation pipelines of exceptional reliability' },
-        { name: 'Kubernetes Orchestration', yearsExp: 2, projects: 6, description: 'Container management with unprecedented control' },
-      ]
+    keyPoints: [
+        'Streamlined CI/CD pipelines that enhance software delivery speed',
+        'Robust containerization and orchestration for scalable applications',
+        'Comprehensive cloud architecture optimized for performance and cost-efficiency',
+        'Effective monitoring and incident response strategies ensuring system reliability'
+    ],
+      "skills": [
+        {
+          name: 'Azure DevOps',
+          yearsExp: 2,
+          projects: 3,
+          description: 'Skilled in leveraging Azure DevOps for project management, CI/CD pipelines, and collaboration, enhancing team productivity and software delivery.'
+      },
+        {
+            name: 'AWS Architecture',
+            yearsExp: 1,
+            projects: 8,
+            description: 'Experienced in designing robust cloud infrastructures on AWS, optimizing for performance, scalability, and cost-efficiency while ensuring high availability and security.'
+        },
+        {
+            name: 'CI/CD Pipelines',
+            yearsExp: 4,
+            projects: 12,
+            description: 'Skilled in implementing continuous integration and continuous deployment (CI/CD) pipelines that automate testing and deployment processes, ensuring high-quality software delivery.'
+        },
+        {
+          name: 'Networking Fundamentals',
+          yearsExp: 5,
+          projects: 8,
+          description: 'Strong understanding of networking concepts and protocols, enabling effective cloud architecture design and troubleshooting of network issues.'
+      },
+        {
+            name: "Version Control Systems",
+            yearsExp: 9,
+            projects: 25,
+            description: "Expert in managing code efficiently using version control systems like Git, facilitating effective collaboration within teams and maintaining a well-organized codebase."
+        },
+        {
+          name: 'Database Management',
+          yearsExp: 4,
+          projects: 7,
+          description: 'Experienced in managing and optimizing cloud databases (SQL and NoSQL), ensuring high availability, performance, and data integrity.'
+      }
+    ]
     }
   ];
 
