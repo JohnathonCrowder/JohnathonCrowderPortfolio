@@ -7,6 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import profilePhoto from './assets/profilePhoto.png'; 
+import resume from './assets/Johnathon_Crowder_Resume.pdf'; 
+
 
 
 
@@ -54,13 +56,15 @@ const InteractiveImage = () => {
           >
             <div className="text-center">
               <p className="text-[#E8E8E8] text-xl mb-4">Click to view resume</p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-[#8EC38E] text-[#0B0B0F] rounded-lg"
-              >
-                Download CV
-              </motion.button>
+              <a href= {resume} download>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-[#8EC38E] text-[#0B0B0F] rounded-lg"
+                >
+                  Download CV
+                </motion.button>
+              </a>
             </div>
           </motion.div>
         )}
