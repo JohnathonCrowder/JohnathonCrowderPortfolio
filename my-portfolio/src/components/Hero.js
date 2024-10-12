@@ -45,8 +45,8 @@ const Hero = () => {
         transition={{ duration: 30, ease: 'easeInOut', repeat: Infinity }}
       />
 
-      {/* Hero content with enhanced box for visibility */}
-      <div className="container mx-auto px-4 z-20 flex flex-col items-center text-center">
+       {/* Hero content with enhanced box for visibility */}
+       <div className="container mx-auto px-4 z-20 flex flex-col items-center text-center">
         <motion.div
           className="bg-gray-800 bg-opacity-60 rounded-3xl p-8 shadow-lg ring-1 ring-gray-400"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -81,7 +81,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="space-x-4"
+            className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -95,7 +95,7 @@ const Hero = () => {
               View My Work
             </motion.a>
             <motion.a
-              href="#about"  // Ensure there's a corresponding #about section
+              href="#about"
               className="border-2 border-white text-white py-3 px-6 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-white hover:text-blue-700"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
