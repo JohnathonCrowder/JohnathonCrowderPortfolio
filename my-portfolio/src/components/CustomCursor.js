@@ -55,8 +55,11 @@ const CustomCursor = ({ mousePosition }) => {
           width: 40,
           height: 40,
           borderRadius: '50%',
+          left: mousePosition.x - 20,
+          top: mousePosition.y - 20,
           background: 'radial-gradient(circle, #ffffff 0%, #ffcc00 50%, #ff6600 100%)',
           boxShadow: '0 0 10px #ffcc00, 0 0 20px #ff6600',
+          zIndex: 999999,
         }}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.8 }}
@@ -70,15 +73,15 @@ const CustomCursor = ({ mousePosition }) => {
           }}
         />
       </motion.div>
-
+  
       {/* Trail of stars */}
       {trail.map((star, index) => (
         <motion.div
           key={star.id}
           className="star fixed pointer-events-none"
           style={{
-            x: star.x - 3,
-            y: star.y - 3,
+            left: star.x - 3,
+            top: star.y - 3,
             width: 6,
             height: 6,
             borderRadius: '50%',
