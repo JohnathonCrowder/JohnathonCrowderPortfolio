@@ -52,13 +52,13 @@ const CustomCursor = ({ mousePosition }) => {
         style={{
           x: cursorX,
           y: cursorY,
-          width: 30, // Reduced size
-          height: 30, // Reduced size
+          width: 20, // Reduced size
+          height: 20, // Reduced size
           borderRadius: '50%',
-          left: mousePosition.x - 15, // Adjusted position
-          top: mousePosition.y - 15, // Adjusted position
+          left: mousePosition.x - 10, // Adjusted position
+          top: mousePosition.y - 10, // Adjusted position
           background: 'radial-gradient(circle, #ffffff 0%, #ffcc00 50%, #ff6600 100%)',
-          boxShadow: '0 0 10px #ffcc00, 0 0 20px #ff6600',
+          boxShadow: '0 0 5px #ffcc00, 0 0 10px #ff6600', // Reduced shadow size
           zIndex: 999999,
         }}
         whileHover={{ scale: 1.2 }}
@@ -80,13 +80,14 @@ const CustomCursor = ({ mousePosition }) => {
           key={fire.id}
           className="fire fixed pointer-events-none"
           style={{
-            left: fire.x - 5,
-            top: fire.y - 5,
-            width: 10,
-            height: 10,
+            left: fire.x - 2,
+            top: fire.y - 2,
+            width: 4,
+            height: 4,
             borderRadius: '50%',
             background: `radial-gradient(circle, rgba(255, 102, 0, ${1 - index * 0.05}) 0%, rgba(255, 204, 0, ${1 - index * 0.05}) 100%)`,
             opacity: 1 - index * 0.05, // Fade out older fire particles
+            boxShadow: `0 0 2px rgba(255, 102, 0, ${1 - index * 0.05}), 0 0 4px rgba(255, 204, 0, ${1 - index * 0.05})`,
           }}
           initial={{ scale: 1 }}
           animate={{ scale: 0 }}
