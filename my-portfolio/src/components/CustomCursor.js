@@ -17,7 +17,7 @@ const CustomCursor = ({ mousePosition }) => {
       // Add new fire particle to the trail
       setTrail(prevTrail => [
         { x: e.clientX, y: e.clientY, id: Date.now() },
-        ...prevTrail.slice(0, 20), // Keep only the last 20 fire particles
+        ...prevTrail.slice(0, 40), // Keep only the last 40 fire particles (doubled length)
       ]);
     };
 
@@ -52,13 +52,13 @@ const CustomCursor = ({ mousePosition }) => {
         style={{
           x: cursorX,
           y: cursorY,
-          width: 20, // Reduced size
-          height: 20, // Reduced size
+          width: 20,
+          height: 20,
           borderRadius: '50%',
-          left: mousePosition.x - 10, // Adjusted position
-          top: mousePosition.y - 10, // Adjusted position
+          left: mousePosition.x - 10,
+          top: mousePosition.y - 10,
           background: 'radial-gradient(circle, #ffffff 0%, #ffcc00 50%, #ff6600 100%)',
-          boxShadow: '0 0 5px #ffcc00, 0 0 10px #ff6600', // Reduced shadow size
+          boxShadow: '0 0 5px #ffcc00, 0 0 10px #ff6600',
           zIndex: 999999,
         }}
         whileHover={{ scale: 1.2 }}
@@ -80,14 +80,14 @@ const CustomCursor = ({ mousePosition }) => {
           key={fire.id}
           className="fire fixed pointer-events-none"
           style={{
-            left: fire.x - 2,
-            top: fire.y - 2,
-            width: 4,
-            height: 4,
+            left: fire.x - 4, // Adjusted position
+            top: fire.y - 4, // Adjusted position
+            width: 8, // Doubled size
+            height: 8, // Doubled size
             borderRadius: '50%',
-            background: `radial-gradient(circle, rgba(255, 102, 0, ${1 - index * 0.05}) 0%, rgba(255, 204, 0, ${1 - index * 0.05}) 100%)`,
-            opacity: 1 - index * 0.05, // Fade out older fire particles
-            boxShadow: `0 0 2px rgba(255, 102, 0, ${1 - index * 0.05}), 0 0 4px rgba(255, 204, 0, ${1 - index * 0.05})`,
+            background: `radial-gradient(circle, rgba(255, 102, 0, ${1 - index * 0.025}) 0%, rgba(255, 204, 0, ${1 - index * 0.025}) 100%)`,
+            opacity: 1 - index * 0.025, // Fade out older fire particles
+            boxShadow: `0 0 4px rgba(255, 102, 0, ${1 - index * 0.025}), 0 0 8px rgba(255, 204, 0, ${1 - index * 0.025})`, // Adjusted shadow size
           }}
           initial={{ scale: 1 }}
           animate={{ scale: 0 }}
