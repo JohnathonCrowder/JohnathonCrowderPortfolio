@@ -81,12 +81,12 @@ const CosmicDivider = () => (
 function Projects() {
   const projects = [
     {
-      title: "PawFinderPlus",
+      title: "PuppyHorizon",
       description: "A website for connecting Dog Breeders with Clients. Also helps breeders track financial records.",
       image: pawfinderImg,
       technologies: ["Flask", "Python", "SqlAlchemy", "TailwindCss"],
-      link: "https://pawfinderplus.onrender.com/",
-      github: "#",
+      link: "https://puppyhorizon.com/",
+      github: "https://github.com/JohnathonCrowder",
     },
     {
       title: "GreenThumb Landscaping",
@@ -94,7 +94,7 @@ function Projects() {
       image: greenthumbImg,
       technologies: ["Flask", "Python", "SqlAlchemy", "TailwindCss"],
       link: "https://landscape-website.onrender.com",
-      github: "#",
+      github: "https://github.com/JohnathonCrowder/GreenThumbLandscaping",
     },
     {
       title: "Heartland Dachshunds",
@@ -102,7 +102,7 @@ function Projects() {
       image: heartdachImg,
       technologies: ["JavaScript", "Python", "Flask", "SqlAlchemy"],
       link: "https://heartlanddachshunds.onrender.com/",
-      github: "#",
+      github: "https://github.com/JohnathonCrowder",
     },
     {
       title: "Simmons Family Junk Removal",
@@ -110,15 +110,15 @@ function Projects() {
       image: junkremovalImg,
       technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
       link: "https://simmonsfamilyjunkremoval.onrender.com/",
-      github: "#",
+      github: "https://github.com/JohnathonCrowder",
     },
     {
       title: "Portfolio Website",
       description: "This would be the website your looking at now, it was created with react and node.js",
       image: resumeImg,
       technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
-      link: "#",
-      github: "#",
+      link: "https://yourportfolio.com",
+      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
     {
       title: "Personal Web-design Website",
@@ -126,9 +126,8 @@ function Projects() {
       image: webdesignImg,
       technologies: ["Flask", "Python", "Javascript", "TailwindCss"],
       link: "https://websitedevelopment.onrender.com/",
-      github: "#",
+      github: "https://github.com/JohnathonCrowder",
     },
-    
   ];
 
   return (
