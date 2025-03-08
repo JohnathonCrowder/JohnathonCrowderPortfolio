@@ -6,6 +6,9 @@ import junkremovalImg from './assets/junkremoval.png';
 import heartdachImg from './assets/heartdach.png';
 import pawfinderImg from './assets/pawfinder.png';
 import resumeImg from './assets/resume.png';
+import BlackholeImg from './assets/blackhole.png';
+import DirtbikeImg from './assets/dirtbike.png';
+
 
 
 
@@ -81,6 +84,22 @@ const CosmicDivider = () => (
 function Projects() {
   const projects = [
     {
+      title: "Fusion Code Labs Blog",
+      description: "This is my personal tech blog i created from scratch. I still actively manage this blog.",
+      image: webdesignImg,
+      technologies: ["React", "Express", "Typescript", "MongoDb"],
+      link: "https://fusioncodelab.com/",
+      github: "https://github.com/JohnathonCrowder",
+    },
+    {
+      title: "CodeFusionJs",
+      description: "This is a tool I created that allows developers to quickly prepare code for Ai Models. Helps manage projects and anonymization",
+      image: heartdachImg,
+      technologies: ["React","TypeScript", "TailWindCss"],
+      link: "https://codefusionjs.onrender.com/",
+      github: "https://github.com/JohnathonCrowder",
+    },
+    {
       title: "PuppyHorizon",
       description: "A website for connecting Dog Breeders with Clients. Also helps breeders track financial records.",
       image: pawfinderImg,
@@ -92,24 +111,17 @@ function Projects() {
       title: "GreenThumb Landscaping",
       description: "A Demo Website for a landscaping company, created with python and flask.",
       image: greenthumbImg,
-      technologies: ["Flask", "Python", "SqlAlchemy", "TailwindCss"],
-      link: "https://landscape-website.onrender.com",
+      technologies: ["React", "JavaScript", "CustomCss", "TailwindCss"],
+      link: "https://greenthumblandscapingdemo.onrender.com/",
       github: "https://github.com/JohnathonCrowder/GreenThumbLandscaping",
     },
-    {
-      title: "Heartland Dachshunds",
-      description: "A Demo Website for a dog breeder, featuring easy puppy and litter management.",
-      image: heartdachImg,
-      technologies: ["JavaScript", "Python", "Flask", "SqlAlchemy"],
-      link: "https://heartlanddachshunds.onrender.com/",
-      github: "https://github.com/JohnathonCrowder",
-    },
+    
     {
       title: "Simmons Family Junk Removal",
       description: "A Demo website created for a local buiseness. Includes easy to use blog system to increase SEO. ",
       image: junkremovalImg,
       technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
-      link: "https://simmonsfamilyjunkremoval.onrender.com/",
+      link: "https://simmonsfamilyjunkremoval-frontend.onrender.com/",
       github: "https://github.com/JohnathonCrowder",
     },
     {
@@ -117,17 +129,34 @@ function Projects() {
       description: "This would be the website your looking at now, it was created with react and node.js",
       image: resumeImg,
       technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
-      link: "https://yourportfolio.com",
+      link: "https://johnathoncrowder.com",
       github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
     {
-      title: "Personal Web-design Website",
-      description: "This is a site i created to help find myself freelance web-design work.",
-      image: webdesignImg,
-      technologies: ["Flask", "Python", "Javascript", "TailwindCss"],
-      link: "https://websitedevelopment.onrender.com/",
-      github: "https://github.com/JohnathonCrowder",
+      title: "Solar System / Blackhole 3d Render",
+      description: "3d Solar System. The blackhole includes accurate gravitational lensing, accretion disks, event horizon, and pulsar beams",
+      image: BlackholeImg,
+      technologies: ["React", "Three.js", "Javascript", "CustomCss"],
+      link: "https://johnathoncrowder.com",
+      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
+    {
+      title: "Dirtbike Repair Shop",
+      description: "This is a demo website i created for a local dirtbike mechanice shop",
+      image: DirtbikeImg,
+      technologies: ["React", "Node.js", "TypeScript", "TailwindCss"],
+      link: "https://dirtbikesunlimited-react.onrender.com/",
+      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
+    },
+    {
+      title: "Portfolio Website",
+      description: "This would be the website your looking at now, it was created with react and node.js",
+      image: resumeImg,
+      technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
+      link: "https://johnathoncrowder.com",
+      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
+    },
+    
   ];
 
   return (

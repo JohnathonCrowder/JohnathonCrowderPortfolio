@@ -49,7 +49,7 @@ const CategoryCard = ({ category }) => (
           <span className="text-4xl mr-4">{category.icon}</span>
           {category.name}
         </h3>
-        <span className="text-[#8EC38E] font-light">{category.experience} Years of Excellence</span>
+        <span className="text-[#8EC38E] font-light">{category.experience} Years of Experience</span>
       </div>
       <p className="mt-6 text-[#A0A0A8] leading-relaxed text-lg">{category.description}</p>
     </div>
@@ -109,7 +109,7 @@ const SkillsSection = () => {
       bgColor: 'bg-[#1E1E24]', 
       accentColor: 'bg-[#8EC38E]',
       experience: '4+',
-      description: "Creating seamless digital experiences through a blend of meticulous design and cutting-edge technology.",
+      description: "I excel at creating unique digital experiences through a blend of meticulous design and cutting-edge technology.",
       keyPoints: [
         'Custom component architecture designed for flexibility and reusability',
         'Efficient state management ensuring optimal performance in dynamic applications',
@@ -117,6 +117,12 @@ const SkillsSection = () => {
         'Thorough performance enhancements leading to faster load times and smoother interactions'
     ],
       "skills": [
+        {
+          name: "JavaScript / Typescript",
+          yearsExp: 4,
+          projects: 25,
+          description: "Proficient in JavaScript for building dynamic web applications, with a strong focus on developing efficient code and implementing modern JavaScript features to enhance functionality."
+      },
         {
             name: "React",
             yearsExp: 2,
@@ -130,29 +136,16 @@ const SkillsSection = () => {
             description: "Expert in crafting user interfaces that balance elegance and usability, ensuring that designs not only look good but also provide a seamless user experience."
         },
         {
+          name: "HTML",
+          yearsExp: 4,
+          projects: 25,
+          description: "Skilled in using HTML to create semantic, accessible web content, ensuring a solid foundation for web applications that improves SEO and user experience."
+      },
+        {
             name: "CSS/SASS",
             yearsExp: 4,
             projects: 15,
             description: "Proficient in implementing advanced styling techniques using CSS and SASS to create visually appealing and maintainable designs that elevate the overall aesthetic of web applications."
-        },
-        {
-            name: "Responsive Web Design",
-            yearsExp: 4,
-            projects: 20,
-            description: "Experienced in ensuring optimal user experiences across all devices and screen sizes through responsive design techniques that adapt layouts and components effectively."
-        },
-        
-        {
-            name: "JavaScript",
-            yearsExp: 4,
-            projects: 25,
-            description: "Proficient in JavaScript for building dynamic web applications, with a strong focus on developing efficient code and implementing modern JavaScript features to enhance functionality."
-        },
-        {
-            name: "HTML",
-            yearsExp: 4,
-            projects: 25,
-            description: "Skilled in using HTML to create semantic, accessible web content, ensuring a solid foundation for web applications that improves SEO and user experience."
         },
         {
           name: "Tailwind CSS",
@@ -160,6 +153,16 @@ const SkillsSection = () => {
           projects: 3,
           description: "Skilled in using Tailwind CSS for utility-first styling, enabling rapid UI development and consistent design across applications."
       },
+        {
+            name: "Responsive Web Design",
+            yearsExp: 4,
+            projects: 20,
+            description: "Experienced in ensuring optimal user experiences across all devices and screen sizes through responsive design techniques that adapt layouts and components effectively."
+        },
+        
+        
+        
+       
       {
           name: "SEO Optimization",
           yearsExp: 3,
@@ -190,20 +193,20 @@ const SkillsSection = () => {
         'API designs that follow industry standards and enhance interoperability'
     ],
       skills: [
-        { name: 'Python', yearsExp: 9, projects: 10, description: 'Experienced Python developer with expertise in backend development, data processing, and automation. Proficient in building APIs, optimizing performance, and handling large datasets, with a strong focus on clean, scalable solutions.' },
+        { name: 'Python', yearsExp: 9, projects: 10, description: 'Experienced Python developer with expertise in backend development, data processing, automation, building APIs, optimizing performance, and handling large datasets.' },
         { name: "Next.js", yearsExp: 2, projects: 8, description: "Experienced in developing modern web applications using Next.js. Skilled in building flexible, scalable solutions with a focus on user experience and performance." },
         { name: 'Node.js', yearsExp: 2, projects: 12, description: 'Experienced in developing robust server-side applications with Node.js, leveraging its non-blocking architecture to create scalable and high-performance solutions.' },
         { name: "Flask", yearsExp: 4, projects: 14, description: 'Expert in building scalable web applications and RESTful APIs with Flask, leveraging its lightweight framework for rapid development and deployment.' },
         { name: 'Database Architecture', yearsExp: 4, projects: 15, description: 'Experienced in designing database structures that ensure data integrity and support complex queries, while leveraging best practices for security and efficiency.' },
         { name: "API's", yearsExp: 4, projects: 14, description: 'Experienced in building versatile and scalable APIs that enable communication between services, with an emphasis on design, security, and documentation for developers.' },
-        { name: "SQL / NoSQL", yearsExp: 3, projects: 14, description: 'Proficient in designing and optimizing SQL and NoSQL databases to meet diverse data storage needs.' },
+        { name: "SQL / NoSQL / MongoDB", yearsExp: 3, projects: 14, description: 'Proficient in designing and optimizing SQL and NoSQL databases to meet diverse data storage needs.' },
         { name: "Automated Testing", yearsExp: 3, projects: 14, description: 'Experienced in implementing automated testing strategies to ensure software quality and reliability. Proficient in creating test suites that reduce bugs, and streamline development.' },
         { name: "Data Visualization", yearsExp: 3, projects: 14, description: 'Specializing in crafting intuitive data dashboards and visual narratives that drive decision-making, utilizing matplotlib and pandas to transform complex data into clear, actionable insights.' },
         
       ]
     },
     {
-      name: 'DevOps & Cloud',
+      name: 'DevOps & Misc.',
       icon: '🚀',
       bgColor: 'bg-[#1E1E24]',
       accentColor: 'bg-[#8EC38E]',
@@ -216,6 +219,25 @@ const SkillsSection = () => {
         'Effective monitoring and incident response strategies ensuring system reliability'
     ],
       "skills": [
+        {
+          name: "Artificial Intelligence",
+          yearsExp: 3,
+          projects: 15,
+          description: "Expert in designing, developing, and deploying AI solutions, with hands-on experience in machine learning, deep learning, and natural language processing."
+      },
+      
+    {
+      name: "Advanced Automation",
+      yearsExp: 6,
+      projects: 12,
+      description: "Skilled in automating workflows, testing, and deployments using scripting, CI/CD pipelines, and automation tools to improve efficiency and reduce manual effort."
+  },
+  {
+    name: "Swift & Xcode",
+    yearsExp: 1,
+    projects: 3,
+    description: "Proficient in developing iOS applications using Swift and Xcode, focusing on clean architecture, UI design, and performance optimization."
+},  
         {
           name: 'Azure DevOps',
           yearsExp: 2,
@@ -235,25 +257,47 @@ const SkillsSection = () => {
             description: 'Skilled in implementing continuous integration and continuous deployment (CI/CD) pipelines that automate testing and deployment processes, ensuring high-quality software delivery.'
         },
         {
-          name: 'Networking Fundamentals',
+          name: "Unit & Automated Testing",
+          yearsExp: 3,
+          projects: 10,
+          description: "Experienced in writing unit and automated tests using frameworks Pytest to ensure code reliability, maintainability, and bug-free deployments."
+      },
+      {
+        name: "Local & Mobile Application Development",
+        yearsExp: 5,
+        projects: 10,
+        description: "Experienced in building high-performance applications for both desktop and mobile platforms, delivering seamless user experiences on Windows and iOS."
+    }
+    ,
+        {
+          name: "CRM Software",
           yearsExp: 5,
           projects: 8,
-          description: 'Strong understanding of networking concepts and protocols, enabling effective cloud architecture design and troubleshooting of network issues.'
+          description: "Experienced in implementing and managing CRM systems to optimize customer relationships, automate workflows, and enhance business operations."
+      },      
+        {
+          name: "Postman",
+          yearsExp: 9,
+          projects: 25,
+          description: "Experienced in using Postman for API testing and development"
       },
-        {
-            name: "Version Control Systems",
-            yearsExp: 9,
-            projects: 25,
-            description: "Expert in managing code efficiently using version control systems like Git, facilitating effective collaboration within teams and maintaining a well-organized codebase."
-        },
-        {
-          name: 'Database Management',
-          yearsExp: 4,
-          projects: 7,
-          description: 'Experienced in managing and optimizing cloud databases (SQL and NoSQL), ensuring high availability, performance, and data integrity.'
-      }
+      {
+        name: "Data Analysis & Visualization",
+        yearsExp: 4,
+        projects: 12,
+        description: "Proficient in using Pandas, NumPy, and Matplotlib for data manipulation, numerical computing, and visualization, enabling efficient analysis and insightful data representation."
+    },
+    {
+      name: "CUDA & Multithreading",
+      yearsExp: 2,
+      projects: 6,
+      description: "Experienced in parallel computing with CUDA and multithreading techniques to optimize performance, accelerate computations, and efficiently utilize GPU and CPU resources."
+  }
+  
+  
     ]
-    }
+    },
+    
   ];
 
   return (
