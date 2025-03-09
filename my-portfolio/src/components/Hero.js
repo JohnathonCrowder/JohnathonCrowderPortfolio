@@ -47,56 +47,56 @@ const Hero = () => {
 
        {/* Hero content with enhanced box for visibility */}
        <div className="container mx-auto px-4 z-20 flex flex-col items-center text-center">
-        <motion.div
-          className="bg-gray-800 bg-opacity-60 rounded-3xl p-8 shadow-lg ring-1 ring-gray-400"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-        >
-          <motion.h1
-            className="text-5xl md:text-7xl font-extrabold mb-2"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Johnathon Crowder
-          </motion.h1>
+  <motion.div
+    className="min-h-[350px] max-h-[450px] overflow-y-auto bg-gray-900 bg-opacity-50 backdrop-blur-md rounded-3xl p-8 shadow-[inset_0_0_12px_rgba(255,255,255,0.2),_0_0_15px_rgba(255,255,255,0.3)] ring-2 ring-gray-500 flex flex-col justify-evenly"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, ease: 'easeInOut' }}
+  >
+    <motion.h1
+      className="text-5xl md:text-7xl font-bold text-white tracking-wider uppercase bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1 }}
+    >
+      Johnathon Crowder
+    </motion.h1>
 
-          <motion.h2
-            className="text-2xl md:text-3xl font-semibold mb-4"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            Software Developer
-          </motion.h2>
+    <motion.h2
+      className="text-2xl md:text-3xl font-medium text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] tracking-wider"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+    >
+      Engineer of the Digital Cosmos
+    </motion.h2>
 
-          
-          <motion.div
-            className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <motion.a
-              href="#projects"
-              className="bg-gradient-to-r from-green-400 to-blue-500 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#about"
-              className="border-2 border-white text-white py-3 px-6 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-white hover:text-blue-700"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
-            </motion.a>
-          </motion.div>
-        </motion.div>
-      </div>
+    <motion.div
+      className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.7 }}
+    >
+      <motion.a
+        href="#projects"
+        className="bg-gradient-to-r from-gray-500 to-gray-700 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Explore My Projects
+      </motion.a>
+      <motion.a
+        href="#contact"
+        className="border-2 border-white text-white py-3 px-6 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-white hover:text-black"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Contact Me
+      </motion.a>
+    </motion.div>
+  </motion.div>
+</div>
+
 
       {/* Scroll indicator */}
       <motion.div
