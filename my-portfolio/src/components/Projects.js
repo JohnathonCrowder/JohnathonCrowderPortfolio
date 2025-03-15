@@ -148,14 +148,7 @@ function Projects() {
       link: "https://dirtbikesunlimited-react.onrender.com/",
       github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
-    {
-      title: "Portfolio Website",
-      description: "This would be the website your looking at now, it was created with react and node.js",
-      image: resumeImg,
-      technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
-      link: "https://johnathoncrowder.com",
-      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
-    },
+    
     
   ];
 
