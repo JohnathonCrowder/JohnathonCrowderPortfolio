@@ -93,7 +93,7 @@ function Projects() {
     },
     {
       title: "CodeFusionJs",
-      description: "This is a tool I created that allows developers to quickly prepare code for Ai Models. Helps manage projects and anonymization",
+      description: "This is a powerful toolbox I crafted to help developers interact with LLM's. You should try it.",
       image: heartdachImg,
       technologies: ["React","TypeScript", "TailWindCss"],
       link: "https://codefusionjs.onrender.com/",
@@ -137,7 +137,7 @@ function Projects() {
       description: "3d Solar System. The blackhole includes accurate gravitational lensing, accretion disks, event horizon, and pulsar beams",
       image: BlackholeImg,
       technologies: ["React", "Three.js", "Javascript", "CustomCss"],
-      link: "https://johnathoncrowder.com",
+      link: "https://react-solar-system.onrender.com",
       github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
     {
