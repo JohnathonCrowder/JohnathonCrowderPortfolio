@@ -8,6 +8,7 @@ import pawfinderImg from './assets/pawfinder.png';
 import resumeImg from './assets/resume.png';
 import BlackholeImg from './assets/blackhole.png';
 import DirtbikeImg from './assets/dirtbike.png';
+import crowderCode from './assets/crowdercode.png';
 
 
 
@@ -84,11 +85,11 @@ const CosmicDivider = () => (
 function Projects() {
   const projects = [
     {
-      title: "Fusion Code Labs Blog",
-      description: "This is my personal tech blog i created from scratch. I still actively manage this blog.",
-      image: webdesignImg,
-      technologies: ["React", "Express", "Typescript", "MongoDb"],
-      link: "https://fusioncodelab.com/",
+      title: "Simmons Family Junk Removal",
+      description: "A real website I created for a local business. This site currently gets real clients ",
+      image: junkremovalImg,
+      technologies: ["Wix", "JavaScript", "Automations", "SEO"],
+      link: "https://simmonsfamjunkremoval.com/",
       github: "https://github.com/JohnathonCrowder",
     },
     {
@@ -99,6 +100,31 @@ function Projects() {
       link: "https://codefusionjs.onrender.com/",
       github: "https://github.com/JohnathonCrowder",
     },
+    {
+      title: "Crowder Code & Design",
+      description: "A real website I created for my business. This site currently gets real clients ",
+      image: crowderCode,
+      technologies: ["React", "Airtable", "TypeScript"],
+      link: "https://crowdercodeanddesign.com/",
+      github: "https://github.com/JohnathonCrowder",
+    },
+    {
+      title: "Dirtbike Repair Shop",
+      description: "This is a demo website i created for a local dirtbike mechanice shop",
+      image: DirtbikeImg,
+      technologies: ["React", "Node.js", "TypeScript", "TailwindCss"],
+      link: "https://dirtbikesunlimited-react.onrender.com/",
+      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
+    },
+    {
+      title: "Fusion Code Labs Blog",
+      description: "This is my personal tech blog i created from scratch. I still actively manage this blog.",
+      image: webdesignImg,
+      technologies: ["React", "Express", "Typescript", "MongoDb"],
+      link: "https://fusioncodelab.com/",
+      github: "https://github.com/JohnathonCrowder",
+    },
+   
     {
       title: "PuppyHorizon",
       description: "A website for connecting Dog Breeders with Clients. Also helps breeders track financial records.",
@@ -117,14 +143,6 @@ function Projects() {
     },
     
     {
-      title: "Simmons Family Junk Removal",
-      description: "A Demo website created for a local buiseness. Includes easy to use blog system to increase SEO. ",
-      image: junkremovalImg,
-      technologies: ["React", "Node.js", "Javascript", "TailwindCss"],
-      link: "https://simmonsfamilyjunkremoval-frontend.onrender.com/",
-      github: "https://github.com/JohnathonCrowder",
-    },
-    {
       title: "Portfolio Website",
       description: "This would be the website your looking at now, it was created with react and node.js",
       image: resumeImg,
@@ -138,14 +156,6 @@ function Projects() {
       image: BlackholeImg,
       technologies: ["React", "Three.js", "Javascript", "CustomCss"],
       link: "https://react-solar-system.onrender.com",
-      github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
-    },
-    {
-      title: "Dirtbike Repair Shop",
-      description: "This is a demo website i created for a local dirtbike mechanice shop",
-      image: DirtbikeImg,
-      technologies: ["React", "Node.js", "TypeScript", "TailwindCss"],
-      link: "https://dirtbikesunlimited-react.onrender.com/",
       github: "https://github.com/JohnathonCrowder/JohnathonCrowderPortfolio",
     },
     
