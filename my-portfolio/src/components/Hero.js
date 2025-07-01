@@ -20,12 +20,7 @@ const Hero = () => {
     }
   }, [smoothGalaxyParallax, galaxyOpacity]);
 
-  const scrollToPortfolio = () => {
-    const portfolioSection = document.getElementById('portfolio');
-    if (portfolioSection) {
-      portfolioSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
